@@ -1,0 +1,2344 @@
+2023-05-01T21:58:48.3553607Z Requested labels: ubuntu-latest
+2023-05-01T21:58:48.3553907Z Job defined at: ndren/element-web/.github/workflows/build.yml@refs/pull/5/merge
+2023-05-01T21:58:48.3554021Z Waiting for a runner to pick up this job...
+2023-05-01T21:58:48.5291172Z Job is waiting for a hosted runner to come online.
+2023-05-01T21:58:51.1645761Z Job is about to start running on the hosted runner: GitHub Actions 4 (hosted)
+2023-05-01T21:58:53.9148370Z Current runner version: '2.303.0'
+2023-05-01T21:58:53.9176451Z ##[group]Operating System
+2023-05-01T21:58:53.9176970Z Ubuntu
+2023-05-01T21:58:53.9177371Z 22.04.2
+2023-05-01T21:58:53.9177675Z LTS
+2023-05-01T21:58:53.9177935Z ##[endgroup]
+2023-05-01T21:58:53.9178282Z ##[group]Runner Image
+2023-05-01T21:58:53.9178680Z Image: ubuntu-22.04
+2023-05-01T21:58:53.9178975Z Version: 20230426.1
+2023-05-01T21:58:53.9179493Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230426.1/images/linux/Ubuntu2204-Readme.md
+2023-05-01T21:58:53.9180157Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230426.1
+2023-05-01T21:58:53.9180565Z ##[endgroup]
+2023-05-01T21:58:53.9180951Z ##[group]Runner Image Provisioner
+2023-05-01T21:58:53.9181318Z 2.0.161.1
+2023-05-01T21:58:53.9181585Z ##[endgroup]
+2023-05-01T21:58:53.9182293Z ##[group]GITHUB_TOKEN Permissions
+2023-05-01T21:58:53.9182903Z Contents: read
+2023-05-01T21:58:53.9183240Z Metadata: read
+2023-05-01T21:58:53.9183798Z Packages: read
+2023-05-01T21:58:53.9184254Z ##[endgroup]
+2023-05-01T21:58:53.9187746Z Secret source: Actions
+2023-05-01T21:58:53.9188279Z Prepare workflow directory
+2023-05-01T21:58:54.0246969Z Prepare all required actions
+2023-05-01T21:58:54.0428840Z Getting action download info
+2023-05-01T21:58:54.4089344Z Download action repository 'actions/checkout@v3' (SHA:8e5e7e5ab8b370d6c329ec480221332ada57f0ab)
+2023-05-01T21:58:54.7713407Z Download action repository 'actions/setup-node@v3' (SHA:64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c)
+2023-05-01T21:58:55.1370197Z Complete job name: Build
+2023-05-01T21:58:55.2329893Z ##[group]Run actions/checkout@v3
+2023-05-01T21:58:55.2330249Z with:
+2023-05-01T21:58:55.2330524Z   repository: ndren/element-web
+2023-05-01T21:58:55.2331044Z   token: ***
+2023-05-01T21:58:55.2331302Z   ssh-strict: true
+2023-05-01T21:58:55.2331611Z   persist-credentials: true
+2023-05-01T21:58:55.2331885Z   clean: true
+2023-05-01T21:58:55.2332132Z   fetch-depth: 1
+2023-05-01T21:58:55.2332386Z   lfs: false
+2023-05-01T21:58:55.2332637Z   submodules: false
+2023-05-01T21:58:55.2332921Z   set-safe-directory: true
+2023-05-01T21:58:55.2333190Z env:
+2023-05-01T21:58:55.2333443Z   REPOSITORY: ndren/element-web
+2023-05-01T21:58:55.2333732Z   PR_NUMBER: 5
+2023-05-01T21:58:55.2333979Z ##[endgroup]
+2023-05-01T21:58:55.4946803Z Syncing repository: ndren/element-web
+2023-05-01T21:58:55.4948504Z ##[group]Getting Git version info
+2023-05-01T21:58:55.4949064Z Working directory is '/home/runner/work/element-web/element-web'
+2023-05-01T21:58:55.4951764Z [command]/usr/bin/git version
+2023-05-01T21:58:55.5108477Z git version 2.40.1
+2023-05-01T21:58:55.5126921Z ##[endgroup]
+2023-05-01T21:58:55.5146273Z Temporarily overriding HOME='/home/runner/work/_temp/7edf17bd-e44f-4d27-a77a-82bc7332c41e' before making global git config changes
+2023-05-01T21:58:55.5146864Z Adding repository directory to the temporary git global config as a safe directory
+2023-05-01T21:58:55.5151537Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/element-web/element-web
+2023-05-01T21:58:55.5200423Z Deleting the contents of '/home/runner/work/element-web/element-web'
+2023-05-01T21:58:55.5206574Z ##[group]Initializing the repository
+2023-05-01T21:58:55.5210910Z [command]/usr/bin/git init /home/runner/work/element-web/element-web
+2023-05-01T21:58:55.5291074Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-05-01T21:58:55.5291799Z hint: is subject to change. To configure the initial branch name to use in all
+2023-05-01T21:58:55.5292916Z hint: of your new repositories, which will suppress this warning, call:
+2023-05-01T21:58:55.5293414Z hint: 
+2023-05-01T21:58:55.5294379Z hint: 	git config --global init.defaultBranch <name>
+2023-05-01T21:58:55.5294860Z hint: 
+2023-05-01T21:58:55.5295798Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-05-01T21:58:55.5296500Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-05-01T21:58:55.5297372Z hint: 
+2023-05-01T21:58:55.5298213Z hint: 	git branch -m <name>
+2023-05-01T21:58:55.5303205Z Initialized empty Git repository in /home/runner/work/element-web/element-web/.git/
+2023-05-01T21:58:55.5313575Z [command]/usr/bin/git remote add origin https://github.com/ndren/element-web
+2023-05-01T21:58:55.5357570Z ##[endgroup]
+2023-05-01T21:58:55.5358289Z ##[group]Disabling automatic garbage collection
+2023-05-01T21:58:55.5361462Z [command]/usr/bin/git config --local gc.auto 0
+2023-05-01T21:58:55.5393826Z ##[endgroup]
+2023-05-01T21:58:55.5394493Z ##[group]Setting up auth
+2023-05-01T21:58:55.5400902Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-05-01T21:58:55.5434056Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-05-01T21:58:55.5800263Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-05-01T21:58:55.5824914Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-05-01T21:58:55.6046287Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-05-01T21:58:55.6081004Z ##[endgroup]
+2023-05-01T21:58:55.6081812Z ##[group]Fetching the repository
+2023-05-01T21:58:55.6091286Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +ca461d158e961c88668de4e7a4e26b0767f3a5da:refs/remotes/pull/5/merge
+2023-05-01T21:58:55.8330038Z remote: Enumerating objects: 342, done.        
+2023-05-01T21:58:55.8330441Z remote: Counting objects:   0% (1/342)        
+2023-05-01T21:58:55.8330751Z remote: Counting objects:   1% (4/342)        
+2023-05-01T21:58:55.8331057Z remote: Counting objects:   2% (7/342)        
+2023-05-01T21:58:55.8332315Z remote: Counting objects:   3% (11/342)        
+2023-05-01T21:58:55.8332702Z remote: Counting objects:   4% (14/342)        
+2023-05-01T21:58:55.8333007Z remote: Counting objects:   5% (18/342)        
+2023-05-01T21:58:55.8333310Z remote: Counting objects:   6% (21/342)        
+2023-05-01T21:58:55.8333609Z remote: Counting objects:   7% (24/342)        
+2023-05-01T21:58:55.8333910Z remote: Counting objects:   8% (28/342)        
+2023-05-01T21:58:55.8334211Z remote: Counting objects:   9% (31/342)        
+2023-05-01T21:58:55.8334522Z remote: Counting objects:  10% (35/342)        
+2023-05-01T21:58:55.8334809Z remote: Counting objects:  11% (38/342)        
+2023-05-01T21:58:55.8335106Z remote: Counting objects:  12% (42/342)        
+2023-05-01T21:58:55.8335787Z remote: Counting objects:  13% (45/342)        
+2023-05-01T21:58:55.8336124Z remote: Counting objects:  14% (48/342)        
+2023-05-01T21:58:55.8336422Z remote: Counting objects:  15% (52/342)        
+2023-05-01T21:58:55.8336718Z remote: Counting objects:  16% (55/342)        
+2023-05-01T21:58:55.8337007Z remote: Counting objects:  17% (59/342)        
+2023-05-01T21:58:55.8337295Z remote: Counting objects:  18% (62/342)        
+2023-05-01T21:58:55.8337590Z remote: Counting objects:  19% (65/342)        
+2023-05-01T21:58:55.8337872Z remote: Counting objects:  20% (69/342)        
+2023-05-01T21:58:55.8338163Z remote: Counting objects:  21% (72/342)        
+2023-05-01T21:58:55.8338462Z remote: Counting objects:  22% (76/342)        
+2023-05-01T21:58:55.8338757Z remote: Counting objects:  23% (79/342)        
+2023-05-01T21:58:55.8339043Z remote: Counting objects:  24% (83/342)        
+2023-05-01T21:58:55.8339339Z remote: Counting objects:  25% (86/342)        
+2023-05-01T21:58:55.8339637Z remote: Counting objects:  26% (89/342)        
+2023-05-01T21:58:55.8339922Z remote: Counting objects:  27% (93/342)        
+2023-05-01T21:58:55.8340242Z remote: Counting objects:  28% (96/342)        
+2023-05-01T21:58:55.8340545Z remote: Counting objects:  29% (100/342)        
+2023-05-01T21:58:55.8341180Z remote: Counting objects:  30% (103/342)        
+2023-05-01T21:58:55.8343817Z remote: Counting objects:  31% (107/342)        
+2023-05-01T21:58:55.8344148Z remote: Counting objects:  32% (110/342)        
+2023-05-01T21:58:55.8344438Z remote: Counting objects:  33% (113/342)        
+2023-05-01T21:58:55.8344741Z remote: Counting objects:  34% (117/342)        
+2023-05-01T21:58:55.8345040Z remote: Counting objects:  35% (120/342)        
+2023-05-01T21:58:55.8345337Z remote: Counting objects:  36% (124/342)        
+2023-05-01T21:58:55.8347095Z remote: Counting objects:  37% (127/342)        
+2023-05-01T21:58:55.8347510Z remote: Counting objects:  38% (130/342)        
+2023-05-01T21:58:55.8347816Z remote: Counting objects:  39% (134/342)        
+2023-05-01T21:58:55.8348101Z remote: Counting objects:  40% (137/342)        
+2023-05-01T21:58:55.8348395Z remote: Counting objects:  41% (141/342)        
+2023-05-01T21:58:55.8348694Z remote: Counting objects:  42% (144/342)        
+2023-05-01T21:58:55.8349000Z remote: Counting objects:  43% (148/342)        
+2023-05-01T21:58:55.8349303Z remote: Counting objects:  44% (151/342)        
+2023-05-01T21:58:55.8349606Z remote: Counting objects:  45% (154/342)        
+2023-05-01T21:58:55.8349891Z remote: Counting objects:  46% (158/342)        
+2023-05-01T21:58:55.8351700Z remote: Counting objects:  47% (161/342)        
+2023-05-01T21:58:55.8352014Z remote: Counting objects:  48% (165/342)        
+2023-05-01T21:58:55.8352319Z remote: Counting objects:  49% (168/342)        
+2023-05-01T21:58:55.8352873Z remote: Counting objects:  50% (171/342)        
+2023-05-01T21:58:55.8353182Z remote: Counting objects:  51% (175/342)        
+2023-05-01T21:58:55.8353490Z remote: Counting objects:  52% (178/342)        
+2023-05-01T21:58:55.8353782Z remote: Counting objects:  53% (182/342)        
+2023-05-01T21:58:55.8354083Z remote: Counting objects:  54% (185/342)        
+2023-05-01T21:58:55.8354386Z remote: Counting objects:  55% (189/342)        
+2023-05-01T21:58:55.8354680Z remote: Counting objects:  56% (192/342)        
+2023-05-01T21:58:55.8354977Z remote: Counting objects:  57% (195/342)        
+2023-05-01T21:58:55.8355275Z remote: Counting objects:  58% (199/342)        
+2023-05-01T21:58:55.8356978Z remote: Counting objects:  59% (202/342)        
+2023-05-01T21:58:55.8357381Z remote: Counting objects:  60% (206/342)        
+2023-05-01T21:58:55.8361145Z remote: Counting objects:  61% (209/342)        
+2023-05-01T21:58:55.8361643Z remote: Counting objects:  62% (213/342)        
+2023-05-01T21:58:55.8361954Z remote: Counting objects:  63% (216/342)        
+2023-05-01T21:58:55.8364985Z remote: Counting objects:  64% (219/342)        
+2023-05-01T21:58:55.8365315Z remote: Counting objects:  65% (223/342)        
+2023-05-01T21:58:55.8365614Z remote: Counting objects:  66% (226/342)        
+2023-05-01T21:58:55.8365900Z remote: Counting objects:  67% (230/342)        
+2023-05-01T21:58:55.8366197Z remote: Counting objects:  68% (233/342)        
+2023-05-01T21:58:55.8366512Z remote: Counting objects:  69% (236/342)        
+2023-05-01T21:58:55.8368035Z remote: Counting objects:  70% (240/342)        
+2023-05-01T21:58:55.8368435Z remote: Counting objects:  71% (243/342)        
+2023-05-01T21:58:55.8368745Z remote: Counting objects:  72% (247/342)        
+2023-05-01T21:58:55.8370322Z remote: Counting objects:  73% (250/342)        
+2023-05-01T21:58:55.8370642Z remote: Counting objects:  74% (254/342)        
+2023-05-01T21:58:55.8370951Z remote: Counting objects:  75% (257/342)        
+2023-05-01T21:58:55.8371264Z remote: Counting objects:  76% (260/342)        
+2023-05-01T21:58:55.8371544Z remote: Counting objects:  77% (264/342)        
+2023-05-01T21:58:55.8371839Z remote: Counting objects:  78% (267/342)        
+2023-05-01T21:58:55.8372134Z remote: Counting objects:  79% (271/342)        
+2023-05-01T21:58:55.8372414Z remote: Counting objects:  80% (274/342)        
+2023-05-01T21:58:55.8372708Z remote: Counting objects:  81% (278/342)        
+2023-05-01T21:58:55.8373007Z remote: Counting objects:  82% (281/342)        
+2023-05-01T21:58:55.8373536Z remote: Counting objects:  83% (284/342)        
+2023-05-01T21:58:55.8373835Z remote: Counting objects:  84% (288/342)        
+2023-05-01T21:58:55.8374134Z remote: Counting objects:  85% (291/342)        
+2023-05-01T21:58:55.8374422Z remote: Counting objects:  86% (295/342)        
+2023-05-01T21:58:55.8374723Z remote: Counting objects:  87% (298/342)        
+2023-05-01T21:58:55.8375024Z remote: Counting objects:  88% (301/342)        
+2023-05-01T21:58:55.8375325Z remote: Counting objects:  89% (305/342)        
+2023-05-01T21:58:55.8375616Z remote: Counting objects:  90% (308/342)        
+2023-05-01T21:58:55.8375911Z remote: Counting objects:  91% (312/342)        
+2023-05-01T21:58:55.8376208Z remote: Counting objects:  92% (315/342)        
+2023-05-01T21:58:55.8376493Z remote: Counting objects:  93% (319/342)        
+2023-05-01T21:58:55.8376787Z remote: Counting objects:  94% (322/342)        
+2023-05-01T21:58:55.8378557Z remote: Counting objects:  95% (325/342)        
+2023-05-01T21:58:55.8378959Z remote: Counting objects:  96% (329/342)        
+2023-05-01T21:58:55.8379261Z remote: Counting objects:  97% (332/342)        
+2023-05-01T21:58:55.8426702Z remote: Counting objects:  98% (336/342)        
+2023-05-01T21:58:55.8427071Z remote: Counting objects:  99% (339/342)        
+2023-05-01T21:58:55.8427401Z remote: Counting objects: 100% (342/342)        
+2023-05-01T21:58:55.8427720Z remote: Counting objects: 100% (342/342), done.        
+2023-05-01T21:58:55.8428261Z remote: Compressing objects:   0% (1/280)        
+2023-05-01T21:58:55.8428596Z remote: Compressing objects:   1% (3/280)        
+2023-05-01T21:58:55.8428916Z remote: Compressing objects:   2% (6/280)        
+2023-05-01T21:58:55.8429220Z remote: Compressing objects:   3% (9/280)        
+2023-05-01T21:58:55.8429541Z remote: Compressing objects:   4% (12/280)        
+2023-05-01T21:58:55.8429862Z remote: Compressing objects:   5% (14/280)        
+2023-05-01T21:58:55.8430183Z remote: Compressing objects:   6% (17/280)        
+2023-05-01T21:58:55.8430494Z remote: Compressing objects:   7% (20/280)        
+2023-05-01T21:58:55.8430813Z remote: Compressing objects:   8% (23/280)        
+2023-05-01T21:58:55.8431130Z remote: Compressing objects:   9% (26/280)        
+2023-05-01T21:58:55.8431430Z remote: Compressing objects:  10% (28/280)        
+2023-05-01T21:58:55.8431748Z remote: Compressing objects:  11% (31/280)        
+2023-05-01T21:58:55.8432060Z remote: Compressing objects:  12% (34/280)        
+2023-05-01T21:58:55.8432367Z remote: Compressing objects:  13% (37/280)        
+2023-05-01T21:58:55.8432682Z remote: Compressing objects:  14% (40/280)        
+2023-05-01T21:58:55.8432994Z remote: Compressing objects:  15% (42/280)        
+2023-05-01T21:58:55.8433296Z remote: Compressing objects:  16% (45/280)        
+2023-05-01T21:58:55.8433609Z remote: Compressing objects:  17% (48/280)        
+2023-05-01T21:58:55.8433923Z remote: Compressing objects:  18% (51/280)        
+2023-05-01T21:58:55.8434240Z remote: Compressing objects:  19% (54/280)        
+2023-05-01T21:58:55.8434540Z remote: Compressing objects:  20% (56/280)        
+2023-05-01T21:58:55.8434855Z remote: Compressing objects:  21% (59/280)        
+2023-05-01T21:58:55.8435170Z remote: Compressing objects:  22% (62/280)        
+2023-05-01T21:58:55.8435470Z remote: Compressing objects:  23% (65/280)        
+2023-05-01T21:58:55.8435787Z remote: Compressing objects:  24% (68/280)        
+2023-05-01T21:58:55.8436282Z remote: Compressing objects:  25% (70/280)        
+2023-05-01T21:58:55.8436701Z remote: Compressing objects:  26% (73/280)        
+2023-05-01T21:58:55.8437081Z remote: Compressing objects:  27% (76/280)        
+2023-05-01T21:58:55.8444705Z remote: Compressing objects:  28% (79/280)        
+2023-05-01T21:58:55.8450529Z remote: Compressing objects:  29% (82/280)        
+2023-05-01T21:58:55.8454556Z remote: Compressing objects:  30% (84/280)        
+2023-05-01T21:58:55.8474740Z remote: Compressing objects:  31% (87/280)        
+2023-05-01T21:58:55.8476585Z remote: Compressing objects:  32% (90/280)        
+2023-05-01T21:58:55.8476923Z remote: Compressing objects:  33% (93/280)        
+2023-05-01T21:58:55.8478870Z remote: Compressing objects:  34% (96/280)        
+2023-05-01T21:58:55.8490045Z remote: Compressing objects:  35% (98/280)        
+2023-05-01T21:58:55.8511773Z remote: Compressing objects:  36% (101/280)        
+2023-05-01T21:58:55.8520774Z remote: Compressing objects:  37% (104/280)        
+2023-05-01T21:58:55.8530371Z remote: Compressing objects:  38% (107/280)        
+2023-05-01T21:58:55.8536709Z remote: Compressing objects:  39% (110/280)        
+2023-05-01T21:58:55.8546916Z remote: Compressing objects:  40% (112/280)        
+2023-05-01T21:58:55.8547274Z remote: Compressing objects:  41% (115/280)        
+2023-05-01T21:58:55.8557456Z remote: Compressing objects:  42% (118/280)        
+2023-05-01T21:58:55.8557791Z remote: Compressing objects:  43% (121/280)        
+2023-05-01T21:58:55.8558112Z remote: Compressing objects:  44% (124/280)        
+2023-05-01T21:58:55.8558431Z remote: Compressing objects:  45% (126/280)        
+2023-05-01T21:58:55.8562554Z remote: Compressing objects:  46% (129/280)        
+2023-05-01T21:58:55.8568246Z remote: Compressing objects:  47% (132/280)        
+2023-05-01T21:58:55.8571343Z remote: Compressing objects:  48% (135/280)        
+2023-05-01T21:58:55.8571677Z remote: Compressing objects:  49% (138/280)        
+2023-05-01T21:58:55.8574686Z remote: Compressing objects:  50% (140/280)        
+2023-05-01T21:58:55.8580174Z remote: Compressing objects:  51% (143/280)        
+2023-05-01T21:58:55.8588808Z remote: Compressing objects:  52% (146/280)        
+2023-05-01T21:58:55.8589163Z remote: Compressing objects:  53% (149/280)        
+2023-05-01T21:58:55.8589488Z remote: Compressing objects:  54% (152/280)        
+2023-05-01T21:58:55.8589797Z remote: Compressing objects:  55% (154/280)        
+2023-05-01T21:58:55.8595728Z remote: Compressing objects:  56% (157/280)        
+2023-05-01T21:58:55.8598430Z remote: Compressing objects:  57% (160/280)        
+2023-05-01T21:58:55.8598774Z remote: Compressing objects:  58% (163/280)        
+2023-05-01T21:58:55.8599077Z remote: Compressing objects:  59% (166/280)        
+2023-05-01T21:58:55.8772742Z remote: Compressing objects:  60% (168/280)        
+2023-05-01T21:58:55.8774072Z remote: Compressing objects:  61% (171/280)        
+2023-05-01T21:58:55.8802454Z remote: Compressing objects:  62% (174/280)        
+2023-05-01T21:58:55.8802964Z remote: Compressing objects:  63% (177/280)        
+2023-05-01T21:58:55.8803302Z remote: Compressing objects:  64% (180/280)        
+2023-05-01T21:58:55.8803627Z remote: Compressing objects:  65% (182/280)        
+2023-05-01T21:58:55.8803949Z remote: Compressing objects:  66% (185/280)        
+2023-05-01T21:58:55.8804267Z remote: Compressing objects:  67% (188/280)        
+2023-05-01T21:58:55.8804572Z remote: Compressing objects:  68% (191/280)        
+2023-05-01T21:58:55.8804891Z remote: Compressing objects:  69% (194/280)        
+2023-05-01T21:58:55.8805220Z remote: Compressing objects:  70% (196/280)        
+2023-05-01T21:58:55.8805521Z remote: Compressing objects:  71% (199/280)        
+2023-05-01T21:58:55.8805840Z remote: Compressing objects:  72% (202/280)        
+2023-05-01T21:58:55.8806155Z remote: Compressing objects:  73% (205/280)        
+2023-05-01T21:58:55.8806456Z remote: Compressing objects:  74% (208/280)        
+2023-05-01T21:58:55.8806771Z remote: Compressing objects:  75% (210/280)        
+2023-05-01T21:58:55.8807086Z remote: Compressing objects:  76% (213/280)        
+2023-05-01T21:58:55.8807392Z remote: Compressing objects:  77% (216/280)        
+2023-05-01T21:58:55.8807711Z remote: Compressing objects:  78% (219/280)        
+2023-05-01T21:58:55.8808021Z remote: Compressing objects:  79% (222/280)        
+2023-05-01T21:58:55.8809290Z remote: Compressing objects:  80% (224/280)        
+2023-05-01T21:58:55.8812027Z remote: Compressing objects:  81% (227/280)        
+2023-05-01T21:58:55.8819627Z remote: Compressing objects:  82% (230/280)        
+2023-05-01T21:58:55.8835962Z remote: Compressing objects:  83% (233/280)        
+2023-05-01T21:58:55.8841060Z remote: Compressing objects:  84% (236/280)        
+2023-05-01T21:58:55.8845103Z remote: Compressing objects:  85% (238/280)        
+2023-05-01T21:58:55.8850204Z remote: Compressing objects:  86% (241/280)        
+2023-05-01T21:58:55.8853409Z remote: Compressing objects:  87% (244/280)        
+2023-05-01T21:58:55.8855500Z remote: Compressing objects:  88% (247/280)        
+2023-05-01T21:58:55.8855833Z remote: Compressing objects:  89% (250/280)        
+2023-05-01T21:58:55.8856189Z remote: Compressing objects:  90% (252/280)        
+2023-05-01T21:58:55.8856498Z remote: Compressing objects:  91% (255/280)        
+2023-05-01T21:58:55.8857348Z remote: Compressing objects:  92% (258/280)        
+2023-05-01T21:58:55.8857667Z remote: Compressing objects:  93% (261/280)        
+2023-05-01T21:58:55.8858273Z remote: Compressing objects:  94% (264/280)        
+2023-05-01T21:58:55.8858594Z remote: Compressing objects:  95% (266/280)        
+2023-05-01T21:58:55.8859006Z remote: Compressing objects:  96% (269/280)        
+2023-05-01T21:58:55.8860897Z remote: Compressing objects:  97% (272/280)        
+2023-05-01T21:58:55.8861199Z remote: Compressing objects:  98% (275/280)        
+2023-05-01T21:58:55.8861536Z remote: Compressing objects:  99% (278/280)        
+2023-05-01T21:58:55.8861852Z remote: Compressing objects: 100% (280/280)        
+2023-05-01T21:58:55.8862172Z remote: Compressing objects: 100% (280/280), done.        
+2023-05-01T21:58:55.8902825Z Receiving objects:   0% (1/342)
+2023-05-01T21:58:55.8903452Z Receiving objects:   1% (4/342)
+2023-05-01T21:58:55.8904818Z Receiving objects:   2% (7/342)
+2023-05-01T21:58:55.8905832Z Receiving objects:   3% (11/342)
+2023-05-01T21:58:55.8907453Z Receiving objects:   4% (14/342)
+2023-05-01T21:58:55.8909023Z Receiving objects:   5% (18/342)
+2023-05-01T21:58:55.8910217Z Receiving objects:   6% (21/342)
+2023-05-01T21:58:55.8913531Z Receiving objects:   7% (24/342)
+2023-05-01T21:58:55.9104369Z Receiving objects:   8% (28/342)
+2023-05-01T21:58:55.9104731Z Receiving objects:   9% (31/342)
+2023-05-01T21:58:55.9105038Z Receiving objects:  10% (35/342)
+2023-05-01T21:58:55.9105342Z Receiving objects:  11% (38/342)
+2023-05-01T21:58:55.9105647Z Receiving objects:  12% (42/342)
+2023-05-01T21:58:55.9384518Z Receiving objects:  13% (45/342)
+2023-05-01T21:58:55.9387928Z Receiving objects:  14% (48/342)
+2023-05-01T21:58:55.9391195Z Receiving objects:  15% (52/342)
+2023-05-01T21:58:55.9392004Z Receiving objects:  16% (55/342)
+2023-05-01T21:58:55.9393824Z Receiving objects:  17% (59/342)
+2023-05-01T21:58:55.9399733Z Receiving objects:  18% (62/342)
+2023-05-01T21:58:55.9440631Z Receiving objects:  19% (65/342)
+2023-05-01T21:58:55.9618565Z Receiving objects:  20% (69/342)
+2023-05-01T21:58:55.9673242Z Receiving objects:  21% (72/342)
+2023-05-01T21:58:55.9687263Z Receiving objects:  22% (76/342)
+2023-05-01T21:58:55.9687570Z Receiving objects:  23% (79/342)
+2023-05-01T21:58:55.9687863Z Receiving objects:  24% (83/342)
+2023-05-01T21:58:55.9688135Z Receiving objects:  25% (86/342)
+2023-05-01T21:58:55.9688388Z Receiving objects:  26% (89/342)
+2023-05-01T21:58:55.9688652Z Receiving objects:  27% (93/342)
+2023-05-01T21:58:55.9688919Z Receiving objects:  28% (96/342)
+2023-05-01T21:58:55.9689173Z Receiving objects:  29% (100/342)
+2023-05-01T21:58:55.9689450Z Receiving objects:  30% (103/342)
+2023-05-01T21:58:55.9689718Z Receiving objects:  31% (107/342)
+2023-05-01T21:58:55.9689975Z Receiving objects:  32% (110/342)
+2023-05-01T21:58:56.0326497Z Receiving objects:  33% (113/342)
+2023-05-01T21:58:56.0330516Z Receiving objects:  34% (117/342)
+2023-05-01T21:58:56.0388131Z Receiving objects:  35% (120/342)
+2023-05-01T21:58:56.0388450Z Receiving objects:  36% (124/342)
+2023-05-01T21:58:56.0388726Z Receiving objects:  37% (127/342)
+2023-05-01T21:58:56.0388996Z Receiving objects:  38% (130/342)
+2023-05-01T21:58:56.0389258Z Receiving objects:  39% (134/342)
+2023-05-01T21:58:56.0389526Z Receiving objects:  40% (137/342)
+2023-05-01T21:58:56.0390085Z Receiving objects:  41% (141/342)
+2023-05-01T21:58:56.0390337Z Receiving objects:  42% (144/342)
+2023-05-01T21:58:56.0390612Z Receiving objects:  43% (148/342)
+2023-05-01T21:58:56.0390879Z Receiving objects:  44% (151/342)
+2023-05-01T21:58:56.0431327Z Receiving objects:  45% (154/342)
+2023-05-01T21:58:56.0435572Z Receiving objects:  46% (158/342)
+2023-05-01T21:58:56.0435865Z Receiving objects:  47% (161/342)
+2023-05-01T21:58:56.0436550Z Receiving objects:  48% (165/342)
+2023-05-01T21:58:56.0437995Z Receiving objects:  49% (168/342)
+2023-05-01T21:58:56.0439790Z Receiving objects:  50% (171/342)
+2023-05-01T21:58:56.0440664Z Receiving objects:  51% (175/342)
+2023-05-01T21:58:56.0461100Z Receiving objects:  52% (178/342)
+2023-05-01T21:58:56.0467106Z Receiving objects:  53% (182/342)
+2023-05-01T21:58:56.0471553Z Receiving objects:  54% (185/342)
+2023-05-01T21:58:56.0471817Z Receiving objects:  55% (189/342)
+2023-05-01T21:58:56.0472085Z Receiving objects:  56% (192/342)
+2023-05-01T21:58:56.0472359Z Receiving objects:  57% (195/342)
+2023-05-01T21:58:56.0472609Z Receiving objects:  58% (199/342)
+2023-05-01T21:58:56.0472872Z Receiving objects:  59% (202/342)
+2023-05-01T21:58:56.0473135Z Receiving objects:  60% (206/342)
+2023-05-01T21:58:56.0473385Z Receiving objects:  61% (209/342)
+2023-05-01T21:58:56.0473648Z Receiving objects:  62% (213/342)
+2023-05-01T21:58:56.0473911Z Receiving objects:  63% (216/342)
+2023-05-01T21:58:56.0474161Z Receiving objects:  64% (219/342)
+2023-05-01T21:58:56.0474421Z Receiving objects:  65% (223/342)
+2023-05-01T21:58:56.0474915Z Receiving objects:  66% (226/342)
+2023-05-01T21:58:56.0475197Z Receiving objects:  67% (230/342)
+2023-05-01T21:58:56.0475453Z Receiving objects:  68% (233/342)
+2023-05-01T21:58:56.0485901Z Receiving objects:  69% (236/342)
+2023-05-01T21:58:56.0486203Z Receiving objects:  70% (240/342)
+2023-05-01T21:58:56.0507968Z Receiving objects:  71% (243/342)
+2023-05-01T21:58:56.0508286Z Receiving objects:  72% (247/342)
+2023-05-01T21:58:56.0508573Z Receiving objects:  73% (250/342)
+2023-05-01T21:58:56.0508827Z Receiving objects:  74% (254/342)
+2023-05-01T21:58:56.0509090Z Receiving objects:  75% (257/342)
+2023-05-01T21:58:56.0509362Z Receiving objects:  76% (260/342)
+2023-05-01T21:58:56.0509612Z Receiving objects:  77% (264/342)
+2023-05-01T21:58:56.0509879Z Receiving objects:  78% (267/342)
+2023-05-01T21:58:56.0510142Z Receiving objects:  79% (271/342)
+2023-05-01T21:58:56.0510408Z Receiving objects:  80% (274/342)
+2023-05-01T21:58:56.0510659Z Receiving objects:  81% (278/342)
+2023-05-01T21:58:56.0510929Z Receiving objects:  82% (281/342)
+2023-05-01T21:58:56.0511193Z Receiving objects:  83% (284/342)
+2023-05-01T21:58:56.0511443Z Receiving objects:  84% (288/342)
+2023-05-01T21:58:56.0538463Z Receiving objects:  85% (291/342)
+2023-05-01T21:58:56.0544735Z Receiving objects:  86% (295/342)
+2023-05-01T21:58:56.0545411Z Receiving objects:  87% (298/342)
+2023-05-01T21:58:56.0545691Z Receiving objects:  88% (301/342)
+2023-05-01T21:58:56.0550018Z Receiving objects:  89% (305/342)
+2023-05-01T21:58:56.0553513Z Receiving objects:  90% (308/342)
+2023-05-01T21:58:56.0554070Z Receiving objects:  91% (312/342)
+2023-05-01T21:58:56.0554596Z Receiving objects:  92% (315/342)
+2023-05-01T21:58:56.0555157Z Receiving objects:  93% (319/342)
+2023-05-01T21:58:56.0555658Z Receiving objects:  94% (322/342)
+2023-05-01T21:58:56.0556173Z Receiving objects:  95% (325/342)
+2023-05-01T21:58:56.0557909Z Receiving objects:  96% (329/342)
+2023-05-01T21:58:56.0561377Z Receiving objects:  97% (332/342)
+2023-05-01T21:58:56.0561707Z Receiving objects:  98% (336/342)
+2023-05-01T21:58:56.0680136Z Receiving objects:  99% (339/342)
+2023-05-01T21:58:56.0682690Z remote: Total 342 (delta 58), reused 180 (delta 29), pack-reused 0        
+2023-05-01T21:58:56.0684381Z Receiving objects: 100% (342/342)
+2023-05-01T21:58:56.0688725Z Receiving objects: 100% (342/342), 1.44 MiB | 8.10 MiB/s, done.
+2023-05-01T21:58:56.0692315Z Resolving deltas:   0% (0/58)
+2023-05-01T21:58:56.0695375Z Resolving deltas:   1% (1/58)
+2023-05-01T21:58:56.0703953Z Resolving deltas:   3% (2/58)
+2023-05-01T21:58:56.0705943Z Resolving deltas:   5% (3/58)
+2023-05-01T21:58:56.0706810Z Resolving deltas:   6% (4/58)
+2023-05-01T21:58:56.0707078Z Resolving deltas:   8% (5/58)
+2023-05-01T21:58:56.0707343Z Resolving deltas:  10% (6/58)
+2023-05-01T21:58:56.0707602Z Resolving deltas:  12% (7/58)
+2023-05-01T21:58:56.0707849Z Resolving deltas:  13% (8/58)
+2023-05-01T21:58:56.0708113Z Resolving deltas:  15% (9/58)
+2023-05-01T21:58:56.0708375Z Resolving deltas:  17% (10/58)
+2023-05-01T21:58:56.0708650Z Resolving deltas:  18% (11/58)
+2023-05-01T21:58:56.0708915Z Resolving deltas:  20% (12/58)
+2023-05-01T21:58:56.0709181Z Resolving deltas:  22% (13/58)
+2023-05-01T21:58:56.0718829Z Resolving deltas:  24% (14/58)
+2023-05-01T21:58:56.0719119Z Resolving deltas:  25% (15/58)
+2023-05-01T21:58:56.0719383Z Resolving deltas:  27% (16/58)
+2023-05-01T21:58:56.0719648Z Resolving deltas:  29% (17/58)
+2023-05-01T21:58:56.0720936Z Resolving deltas:  31% (18/58)
+2023-05-01T21:58:56.0723886Z Resolving deltas:  32% (19/58)
+2023-05-01T21:58:56.0724204Z Resolving deltas:  34% (20/58)
+2023-05-01T21:58:56.0724457Z Resolving deltas:  36% (21/58)
+2023-05-01T21:58:56.0724718Z Resolving deltas:  37% (22/58)
+2023-05-01T21:58:56.0725988Z Resolving deltas:  39% (23/58)
+2023-05-01T21:58:56.0726251Z Resolving deltas:  41% (24/58)
+2023-05-01T21:58:56.0726511Z Resolving deltas:  43% (25/58)
+2023-05-01T21:58:56.0726771Z Resolving deltas:  44% (26/58)
+2023-05-01T21:58:56.0727016Z Resolving deltas:  46% (27/58)
+2023-05-01T21:58:56.0727512Z Resolving deltas:  48% (28/58)
+2023-05-01T21:58:56.0727779Z Resolving deltas:  50% (29/58)
+2023-05-01T21:58:56.0728036Z Resolving deltas:  51% (30/58)
+2023-05-01T21:58:56.0728283Z Resolving deltas:  53% (31/58)
+2023-05-01T21:58:56.0728539Z Resolving deltas:  55% (32/58)
+2023-05-01T21:58:56.0728798Z Resolving deltas:  56% (33/58)
+2023-05-01T21:58:56.0729044Z Resolving deltas:  58% (34/58)
+2023-05-01T21:58:56.0729299Z Resolving deltas:  60% (35/58)
+2023-05-01T21:58:56.0729563Z Resolving deltas:  62% (36/58)
+2023-05-01T21:58:56.0729807Z Resolving deltas:  63% (37/58)
+2023-05-01T21:58:56.0730063Z Resolving deltas:  65% (38/58)
+2023-05-01T21:58:56.0730319Z Resolving deltas:  67% (39/58)
+2023-05-01T21:58:56.0730561Z Resolving deltas:  68% (40/58)
+2023-05-01T21:58:56.0730816Z Resolving deltas:  70% (41/58)
+2023-05-01T21:58:56.0731075Z Resolving deltas:  72% (42/58)
+2023-05-01T21:58:56.0731319Z Resolving deltas:  74% (43/58)
+2023-05-01T21:58:56.0731580Z Resolving deltas:  75% (44/58)
+2023-05-01T21:58:56.0731847Z Resolving deltas:  77% (45/58)
+2023-05-01T21:58:56.0732088Z Resolving deltas:  79% (46/58)
+2023-05-01T21:58:56.0732340Z Resolving deltas:  81% (47/58)
+2023-05-01T21:58:56.0732597Z Resolving deltas:  82% (48/58)
+2023-05-01T21:58:56.0733938Z Resolving deltas:  84% (49/58)
+2023-05-01T21:58:56.0734194Z Resolving deltas:  86% (50/58)
+2023-05-01T21:58:56.0734450Z Resolving deltas:  87% (51/58)
+2023-05-01T21:58:56.0734706Z Resolving deltas:  89% (52/58)
+2023-05-01T21:58:56.0734960Z Resolving deltas:  91% (53/58)
+2023-05-01T21:58:56.0735218Z Resolving deltas:  93% (54/58)
+2023-05-01T21:58:56.0735475Z Resolving deltas:  94% (55/58)
+2023-05-01T21:58:56.0735717Z Resolving deltas:  96% (56/58)
+2023-05-01T21:58:56.0735970Z Resolving deltas:  98% (57/58)
+2023-05-01T21:58:56.0736229Z Resolving deltas: 100% (58/58)
+2023-05-01T21:58:56.0736481Z Resolving deltas: 100% (58/58), done.
+2023-05-01T21:58:56.0854456Z From https://github.com/ndren/element-web
+2023-05-01T21:58:56.0855005Z  * [new ref]         ca461d158e961c88668de4e7a4e26b0767f3a5da -> pull/5/merge
+2023-05-01T21:58:56.0885416Z ##[endgroup]
+2023-05-01T21:58:56.0886002Z ##[group]Determining the checkout info
+2023-05-01T21:58:56.0886818Z ##[endgroup]
+2023-05-01T21:58:56.0887261Z ##[group]Checking out the ref
+2023-05-01T21:58:56.0887831Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5/merge
+2023-05-01T21:58:56.1154460Z Note: switching to 'refs/remotes/pull/5/merge'.
+2023-05-01T21:58:56.1155134Z 
+2023-05-01T21:58:56.1155613Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-05-01T21:58:56.1156055Z changes and commit them, and you can discard any commits you make in this
+2023-05-01T21:58:56.1156586Z state without impacting any branches by switching back to a branch.
+2023-05-01T21:58:56.1156897Z 
+2023-05-01T21:58:56.1157205Z If you want to create a new branch to retain commits you create, you may
+2023-05-01T21:58:56.1157675Z do so (now or later) by using -c with the switch command. Example:
+2023-05-01T21:58:56.1157986Z 
+2023-05-01T21:58:56.1158293Z   git switch -c <new-branch-name>
+2023-05-01T21:58:56.1158481Z 
+2023-05-01T21:58:56.1158852Z Or undo this operation with:
+2023-05-01T21:58:56.1159148Z 
+2023-05-01T21:58:56.1159536Z   git switch -
+2023-05-01T21:58:56.1160333Z 
+2023-05-01T21:58:56.1160793Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-05-01T21:58:56.1161661Z 
+2023-05-01T21:58:56.1162143Z HEAD is now at ca461d1 Merge a04d8ea4822592f4a03ae5d509ff7975d566c6bf into 80886b4ca4d5eb0760f4fc85c561905f344de788
+2023-05-01T21:58:56.1168630Z ##[endgroup]
+2023-05-01T21:58:56.1212538Z [command]/usr/bin/git log -1 --format='%H'
+2023-05-01T21:58:56.1240963Z 'ca461d158e961c88668de4e7a4e26b0767f3a5da'
+2023-05-01T21:58:56.1550576Z ##[group]Run actions/setup-node@v3
+2023-05-01T21:58:56.1550939Z with:
+2023-05-01T21:58:56.1551219Z   cache: yarn
+2023-05-01T21:58:56.1551525Z   always-auth: false
+2023-05-01T21:58:56.1551866Z   check-latest: false
+2023-05-01T21:58:56.1552338Z   token: ***
+2023-05-01T21:58:56.1552618Z env:
+2023-05-01T21:58:56.1552963Z   REPOSITORY: ndren/element-web
+2023-05-01T21:58:56.1553248Z   PR_NUMBER: 5
+2023-05-01T21:58:56.1553551Z ##[endgroup]
+2023-05-01T21:58:56.3632047Z ##[group]Environment details
+2023-05-01T21:58:57.2413070Z node: v18.16.0
+2023-05-01T21:58:57.2413971Z npm: 9.5.1
+2023-05-01T21:58:57.2414361Z yarn: 1.22.19
+2023-05-01T21:58:57.2415635Z ##[endgroup]
+2023-05-01T21:58:57.2436676Z [command]/usr/local/bin/yarn --version
+2023-05-01T21:58:57.4088923Z 1.22.19
+2023-05-01T21:58:57.4187082Z [command]/usr/local/bin/yarn cache dir
+2023-05-01T21:58:57.6498125Z /home/runner/.cache/yarn/v6
+2023-05-01T21:58:58.8591930Z Received 192937984 of 314946047 (61.3%), 184.0 MBs/sec
+2023-05-01T21:58:59.5314925Z Received 314946047 of 314946047 (100.0%), 179.5 MBs/sec
+2023-05-01T21:58:59.5316155Z Cache Size: ~300 MB (314946047 B)
+2023-05-01T21:58:59.5356928Z [command]/usr/bin/tar -z -xf /home/runner/work/_temp/de01466c-deba-4b3d-91aa-747c4fe18f55/cache.tgz -P -C /home/runner/work/element-web/element-web
+2023-05-01T21:59:07.2798006Z Cache restored successfully
+2023-05-01T21:59:07.3204984Z Cache restored from key: node-cache-Linux-yarn-19474ca75d17183479ae81f1afd549aaf604a2168dffa3def72e095ca0b71c69
+2023-05-01T21:59:07.3506720Z ##[group]Run ./scripts/layered.sh
+2023-05-01T21:59:07.3507072Z [36;1m./scripts/layered.sh[0m
+2023-05-01T21:59:07.3565749Z shell: /usr/bin/bash -e {0}
+2023-05-01T21:59:07.3566004Z env:
+2023-05-01T21:59:07.3566235Z   REPOSITORY: ndren/element-web
+2023-05-01T21:59:07.3566480Z   PR_NUMBER: 5
+2023-05-01T21:59:07.3566690Z ##[endgroup]
+2023-05-01T21:59:07.3771502Z + yarn install --frozen-lockfile
+2023-05-01T21:59:07.5509485Z yarn install v1.22.19
+2023-05-01T21:59:07.6619271Z [1/4] Resolving packages...
+2023-05-01T21:59:08.2334777Z [2/4] Fetching packages...
+2023-05-01T21:59:08.9901070Z [3/4] Linking dependencies...
+2023-05-01T21:59:08.9943715Z warning "matrix-react-sdk > @matrix-org/matrix-wysiwyg@2.0.0" has incorrect peer dependency "react@^18.2.0".
+2023-05-01T21:59:08.9960244Z warning "matrix-react-sdk > react-blurhash@0.3.0" has incorrect peer dependency "blurhash@^2.0.3".
+2023-05-01T21:59:09.0032871Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-jest@*".
+2023-05-01T21:59:09.0035817Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-jsx-a11y@*".
+2023-05-01T21:59:09.0040528Z warning " > eslint-plugin-matrix-org@1.1.0" has incorrect peer dependency "prettier@2.8.0".
+2023-05-01T21:59:09.0049683Z warning " > extract-text-webpack-plugin@4.0.0-beta.0" has incorrect peer dependency "webpack@^3.0.0 || ^4.0.0".
+2023-05-01T21:59:09.0057783Z warning " > optimize-css-assets-webpack-plugin@6.0.1" has incorrect peer dependency "webpack@^4.0.0".
+2023-05-01T21:59:09.0086331Z warning " > webpack-cli@3.3.12" has incorrect peer dependency "webpack@4.x.x".
+2023-05-01T21:59:09.0093318Z warning " > worklet-loader@2.0.0" has incorrect peer dependency "webpack@^3.0.0 || ^4.0.0-alpha.0 || ^4.0.0".
+2023-05-01T21:59:25.2248067Z [4/4] Building fresh packages...
+2023-05-01T21:59:26.6001295Z Done in 19.06s.
+2023-05-01T21:59:26.6386617Z + export PR_ORG=vector-im
+2023-05-01T21:59:26.6387391Z + PR_ORG=vector-im
+2023-05-01T21:59:26.6388212Z + export PR_REPO=element-web
+2023-05-01T21:59:26.6389425Z + PR_REPO=element-web
+2023-05-01T21:59:26.6390183Z + node_modules/matrix-react-sdk/scripts/fetchdep.sh matrix-org matrix-js-sdk
+2023-05-01T21:59:26.6403947Z + deforg=matrix-org
+2023-05-01T21:59:26.6404675Z + defrepo=matrix-js-sdk
+2023-05-01T21:59:26.6405204Z + defbranch=
+2023-05-01T21:59:26.6406124Z + '[' -z '' ']'
+2023-05-01T21:59:26.6406441Z + defbranch=develop
+2023-05-01T21:59:26.6406819Z + rm -r matrix-js-sdk
+2023-05-01T21:59:26.6415306Z rm: cannot remove 'matrix-js-sdk': No such file or directory
+2023-05-01T21:59:26.6415838Z + true
+2023-05-01T21:59:26.6416239Z + PR_ORG=vector-im
+2023-05-01T21:59:26.6417824Z + PR_REPO=element-web
+2023-05-01T21:59:26.6418198Z Getting info about a PR with number 5
+2023-05-01T21:59:26.6418678Z + '[' -n '' ']'
+2023-05-01T21:59:26.6419026Z + '[' -n 5 ']'
+2023-05-01T21:59:26.6632161Z + getPRInfo 5
+2023-05-01T21:59:26.6632458Z + number=5
+2023-05-01T21:59:26.6632933Z + '[' -n 5 ']'
+2023-05-01T21:59:26.6633383Z + echo 'Getting info about a PR with number 5'
+2023-05-01T21:59:26.6633944Z + apiEndpoint=https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:26.6634515Z ++ curl https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:26.6634858Z ++ jq -r .head.label
+2023-05-01T21:59:26.6635255Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2023-05-01T21:59:26.6635654Z                                  Dload  Upload   Total   Spent    Left  Speed
+2023-05-01T21:59:26.6635846Z 
+2023-05-01T21:59:26.7878476Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2023-05-01T21:59:26.7879656Z 100   119  100   119    0     0    864      0 --:--:-- --:--:-- --:--:--   868
+2023-05-01T21:59:26.7908959Z + head=null
+2023-05-01T21:59:26.7909656Z + BRANCH_ARRAY=(${head//:/ })
+2023-05-01T21:59:26.7912447Z + TRY_ORG=matrix-org
+2023-05-01T21:59:26.7912942Z + TRY_BRANCH=null
+2023-05-01T21:59:26.7913502Z + [[ null == *\:* ]]
+2023-05-01T21:59:26.7915604Z Trying to use matrix-org/matrix-js-sdk#null
+2023-05-01T21:59:26.7916374Z + clone matrix-org matrix-js-sdk null
+2023-05-01T21:59:26.7917338Z + org=matrix-org
+2023-05-01T21:59:26.7917943Z + repo=matrix-js-sdk
+2023-05-01T21:59:26.7918439Z + branch=null
+2023-05-01T21:59:26.7918986Z + '[' -n null ']'
+2023-05-01T21:59:26.7919699Z + echo 'Trying to use matrix-org/matrix-js-sdk#null'
+2023-05-01T21:59:26.7920303Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:26.7921229Z + git clone https://github.com/matrix-org/matrix-js-sdk.git matrix-js-sdk --branch null --depth 1
+2023-05-01T21:59:26.7929228Z Cloning into 'matrix-js-sdk'...
+2023-05-01T21:59:26.9625377Z warning: Could not find remote branch null to clone.
+2023-05-01T21:59:26.9626234Z fatal: Remote branch null not found in upstream origin
+2023-05-01T21:59:26.9639432Z + '[' -n develop ']'
+2023-05-01T21:59:26.9639919Z + clone matrix-org matrix-js-sdk develop
+2023-05-01T21:59:26.9640258Z + org=matrix-org
+2023-05-01T21:59:26.9640577Z + repo=matrix-js-sdk
+2023-05-01T21:59:26.9640865Z + branch=develop
+2023-05-01T21:59:26.9641178Z + '[' -n develop ']'
+2023-05-01T21:59:26.9641651Z + echo 'Trying to use matrix-org/matrix-js-sdk#develop'
+2023-05-01T21:59:26.9642004Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:26.9642714Z + git clone https://github.com/matrix-org/matrix-js-sdk.git matrix-js-sdk --branch develop --depth 1
+2023-05-01T21:59:26.9643928Z Trying to use matrix-org/matrix-js-sdk#develop
+2023-05-01T21:59:26.9654100Z Cloning into 'matrix-js-sdk'...
+2023-05-01T21:59:27.6681146Z + exit 0
+2023-05-01T21:59:27.6682312Z + pushd matrix-js-sdk
+2023-05-01T21:59:27.6682766Z + yarn link
+2023-05-01T21:59:27.6686061Z ~/work/element-web/element-web/matrix-js-sdk ~/work/element-web/element-web
+2023-05-01T21:59:27.8414543Z yarn link v1.22.19
+2023-05-01T21:59:27.8966950Z success Registered "matrix-js-sdk".
+2023-05-01T21:59:27.8968120Z info You can now run `yarn link "matrix-js-sdk"` in the projects where you want to use this package and it will be used instead.
+2023-05-01T21:59:27.8968724Z Done in 0.06s.
+2023-05-01T21:59:27.9075551Z + yarn install --frozen-lockfile
+2023-05-01T21:59:28.0805919Z yarn install v1.22.19
+2023-05-01T21:59:28.1800064Z [1/5] Validating package.json...
+2023-05-01T21:59:28.1839197Z [2/5] Resolving packages...
+2023-05-01T21:59:28.5444607Z [3/5] Fetching packages...
+2023-05-01T21:59:29.0653057Z [4/5] Linking dependencies...
+2023-05-01T21:59:29.0721523Z warning " > better-docs@2.7.2" has unmet peer dependency "react@^17.0.2".
+2023-05-01T21:59:29.0722515Z warning " > better-docs@2.7.2" has unmet peer dependency "react-dom@^17.0.2".
+2023-05-01T21:59:29.0723734Z warning "better-docs > react-ace@9.5.0" has unmet peer dependency "react@^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0".
+2023-05-01T21:59:29.0726062Z warning "better-docs > react-ace@9.5.0" has unmet peer dependency "react-dom@^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0".
+2023-05-01T21:59:29.0726909Z warning "better-docs > react-frame-component@5.2.6" has unmet peer dependency "prop-types@^15.5.9".
+2023-05-01T21:59:29.0728214Z warning "better-docs > react-frame-component@5.2.6" has unmet peer dependency "react@>= 16.3".
+2023-05-01T21:59:29.0729209Z warning "better-docs > react-frame-component@5.2.6" has unmet peer dependency "react-dom@>= 16.3".
+2023-05-01T21:59:29.0731815Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-deprecate@*".
+2023-05-01T21:59:29.0732647Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-jsx-a11y@*".
+2023-05-01T21:59:29.0733764Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-react@*".
+2023-05-01T21:59:29.0734675Z warning " > eslint-plugin-matrix-org@1.1.0" has unmet peer dependency "eslint-plugin-react-hooks@*".
+2023-05-01T21:59:29.0735721Z warning " > eslint-plugin-matrix-org@1.1.0" has incorrect peer dependency "prettier@2.8.0".
+2023-05-01T21:59:29.0742301Z warning " > typedoc-plugin-versions@0.2.3" has incorrect peer dependency "typedoc@^0.23".
+2023-05-01T21:59:37.0208680Z [5/5] Building fresh packages...
+2023-05-01T21:59:37.6817354Z Done in 9.61s.
+2023-05-01T21:59:37.7139829Z + popd
+2023-05-01T21:59:37.7140539Z ~/work/element-web/element-web
+2023-05-01T21:59:37.7141251Z + node_modules/matrix-react-sdk/scripts/fetchdep.sh matrix-org matrix-analytics-events main
+2023-05-01T21:59:37.7156295Z + deforg=matrix-org
+2023-05-01T21:59:37.7156961Z + defrepo=matrix-analytics-events
+2023-05-01T21:59:37.7157475Z + defbranch=main
+2023-05-01T21:59:37.7158028Z + '[' -z main ']'
+2023-05-01T21:59:37.7158960Z + rm -r matrix-analytics-events
+2023-05-01T21:59:37.7167651Z rm: cannot remove 'matrix-analytics-events': No such file or directory
+2023-05-01T21:59:37.7170199Z Getting info about a PR with number 5
+2023-05-01T21:59:37.7171794Z + true
+2023-05-01T21:59:37.7172089Z + PR_ORG=vector-im
+2023-05-01T21:59:37.7172531Z + PR_REPO=element-web
+2023-05-01T21:59:37.7173050Z + '[' -n '' ']'
+2023-05-01T21:59:37.7173500Z + '[' -n 5 ']'
+2023-05-01T21:59:37.7173888Z + getPRInfo 5
+2023-05-01T21:59:37.7174317Z + number=5
+2023-05-01T21:59:37.7174944Z + '[' -n 5 ']'
+2023-05-01T21:59:37.7176107Z + echo 'Getting info about a PR with number 5'
+2023-05-01T21:59:37.7176927Z + apiEndpoint=https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:37.7228434Z ++ curl https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:37.7234301Z   ++ jq -r .head.label
+2023-05-01T21:59:37.7237805Z % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2023-05-01T21:59:37.7242249Z                                  Dload  Upload   Total   Spent    Left  Speed
+2023-05-01T21:59:37.7242464Z 
+2023-05-01T21:59:37.8158005Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2023-05-01T21:59:37.8159233Z 100   119  100   119    0     0   1289      0 --:--:-- --:--:-- --:--:--  1293
+2023-05-01T21:59:37.8183132Z + head=null
+2023-05-01T21:59:37.8183667Z + BRANCH_ARRAY=(${head//:/ })
+2023-05-01T21:59:37.8184382Z + TRY_ORG=matrix-org
+2023-05-01T21:59:37.8185769Z + TRY_BRANCH=null
+2023-05-01T21:59:37.8186206Z + [[ null == *\:* ]]
+2023-05-01T21:59:37.8186769Z + clone matrix-org matrix-analytics-events null
+2023-05-01T21:59:37.8187225Z + org=matrix-org
+2023-05-01T21:59:37.8187711Z + repo=matrix-analytics-events
+2023-05-01T21:59:37.8188234Z + branch=null
+2023-05-01T21:59:37.8189562Z Trying to use matrix-org/matrix-analytics-events#null
+2023-05-01T21:59:37.8190516Z + '[' -n null ']'
+2023-05-01T21:59:37.8191096Z + echo 'Trying to use matrix-org/matrix-analytics-events#null'
+2023-05-01T21:59:37.8191478Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:37.8192280Z + git clone https://github.com/matrix-org/matrix-analytics-events.git matrix-analytics-events --branch null --depth 1
+2023-05-01T21:59:37.8208627Z Cloning into 'matrix-analytics-events'...
+2023-05-01T21:59:37.9761748Z warning: Could not find remote branch null to clone.
+2023-05-01T21:59:37.9762631Z fatal: Remote branch null not found in upstream origin
+2023-05-01T21:59:37.9775798Z + '[' -n develop ']'
+2023-05-01T21:59:37.9776379Z + clone matrix-org matrix-analytics-events develop
+2023-05-01T21:59:37.9776751Z + org=matrix-org
+2023-05-01T21:59:37.9777140Z + repo=matrix-analytics-events
+2023-05-01T21:59:37.9777424Z + branch=develop
+2023-05-01T21:59:37.9777733Z + '[' -n develop ']'
+2023-05-01T21:59:37.9778286Z + echo 'Trying to use matrix-org/matrix-analytics-events#develop'
+2023-05-01T21:59:37.9778665Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:37.9779481Z + git clone https://github.com/matrix-org/matrix-analytics-events.git matrix-analytics-events --branch develop --depth 1
+2023-05-01T21:59:37.9780210Z Trying to use matrix-org/matrix-analytics-events#develop
+2023-05-01T21:59:37.9790439Z Cloning into 'matrix-analytics-events'...
+2023-05-01T21:59:38.1547987Z warning: Could not find remote branch develop to clone.
+2023-05-01T21:59:38.1548922Z fatal: Remote branch develop not found in upstream origin
+2023-05-01T21:59:38.1562012Z + clone matrix-org matrix-analytics-events
+2023-05-01T21:59:38.1562394Z + org=matrix-org
+2023-05-01T21:59:38.1563367Z + repo=matrix-analytics-events
+2023-05-01T21:59:38.1563669Z + branch=
+2023-05-01T21:59:38.1563950Z + '[' -n '' ']'
+2023-05-01T21:59:38.1564402Z + clone matrix-org matrix-analytics-events main
+2023-05-01T21:59:38.1564755Z + org=matrix-org
+2023-05-01T21:59:38.1565134Z + repo=matrix-analytics-events
+2023-05-01T21:59:38.1565427Z + branch=main
+2023-05-01T21:59:38.1565704Z + '[' -n main ']'
+2023-05-01T21:59:38.1566208Z + echo 'Trying to use matrix-org/matrix-analytics-events#main'
+2023-05-01T21:59:38.1566580Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:38.1567406Z + git clone https://github.com/matrix-org/matrix-analytics-events.git matrix-analytics-events --branch main --depth 1
+2023-05-01T21:59:38.1568045Z Trying to use matrix-org/matrix-analytics-events#main
+2023-05-01T21:59:38.1575858Z Cloning into 'matrix-analytics-events'...
+2023-05-01T21:59:38.4491659Z + exit 0
+2023-05-01T21:59:38.4493887Z + pushd matrix-analytics-events
+2023-05-01T21:59:38.4494565Z ~/work/element-web/element-web/matrix-analytics-events ~/work/element-web/element-web
+2023-05-01T21:59:38.4495743Z + yarn link
+2023-05-01T21:59:38.6226681Z yarn link v1.22.19
+2023-05-01T21:59:38.6761445Z success Registered "@matrix-org/analytics-events".
+2023-05-01T21:59:38.6762957Z info You can now run `yarn link "@matrix-org/analytics-events"` in the projects where you want to use this package and it will be used instead.
+2023-05-01T21:59:38.6765725Z Done in 0.06s.
+2023-05-01T21:59:38.6863545Z + yarn install --frozen-lockfile
+2023-05-01T21:59:38.8662120Z yarn install v1.22.19
+2023-05-01T21:59:38.9464261Z [1/4] Resolving packages...
+2023-05-01T21:59:39.0225604Z [2/4] Fetching packages...
+2023-05-01T21:59:39.1632537Z [3/4] Linking dependencies...
+2023-05-01T21:59:40.9207239Z [4/4] Building fresh packages...
+2023-05-01T21:59:40.9351878Z Done in 2.08s.
+2023-05-01T21:59:40.9763750Z + yarn build:ts
+2023-05-01T21:59:41.1490792Z yarn run v1.22.19
+2023-05-01T21:59:41.2018124Z $ ./scripts/build-typescript.sh
+2023-05-01T21:59:41.2194684Z ~/work/element-web/element-web/matrix-analytics-events/schemas ~/work/element-web/element-web/matrix-analytics-events
+2023-05-01T21:59:52.2223622Z ~/work/element-web/element-web/matrix-analytics-events
+2023-05-01T21:59:52.2230442Z Done in 11.08s.
+2023-05-01T21:59:52.2367793Z + popd
+2023-05-01T21:59:52.2368467Z ~/work/element-web/element-web
+2023-05-01T21:59:52.2369705Z + node_modules/matrix-react-sdk/scripts/fetchdep.sh matrix-org matrix-react-sdk
+2023-05-01T21:59:52.2381485Z + deforg=matrix-org
+2023-05-01T21:59:52.2381976Z + defrepo=matrix-react-sdk
+2023-05-01T21:59:52.2382421Z + defbranch=
+2023-05-01T21:59:52.2383187Z + '[' -z '' ']'
+2023-05-01T21:59:52.2383591Z + defbranch=develop
+2023-05-01T21:59:52.2384040Z + rm -r matrix-react-sdk
+2023-05-01T21:59:52.2392781Z rm: cannot remove 'matrix-react-sdk': No such file or directory
+2023-05-01T21:59:52.2393493Z + true
+2023-05-01T21:59:52.2393915Z + PR_ORG=vector-im
+2023-05-01T21:59:52.2394336Z + PR_REPO=element-web
+2023-05-01T21:59:52.2394836Z + '[' -n '' ']'
+2023-05-01T21:59:52.2395188Z + '[' -n 5 ']'
+2023-05-01T21:59:52.2396094Z + getPRInfo 5
+2023-05-01T21:59:52.2396387Z Getting info about a PR with number 5
+2023-05-01T21:59:52.2396826Z + number=5
+2023-05-01T21:59:52.2397359Z + '[' -n 5 ']'
+2023-05-01T21:59:52.2400569Z + echo 'Getting info about a PR with number 5'
+2023-05-01T21:59:52.2401259Z + apiEndpoint=https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:52.2402371Z ++ jq -r .head.label
+2023-05-01T21:59:52.2411793Z ++ curl https://api.github.com/repos/vector-im/element-web/pulls/5
+2023-05-01T21:59:52.2474274Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2023-05-01T21:59:52.2480753Z                                  Dload  Upload   Total   Spent    Left  Speed
+2023-05-01T21:59:52.2483564Z 
+2023-05-01T21:59:52.3198943Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2023-05-01T21:59:52.3387540Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2023-05-01T21:59:52.3389215Z 100   119  100   119    0     0   1297      0 --:--:-- --:--:-- --:--:--  1293
+2023-05-01T21:59:52.3412857Z + head=null
+2023-05-01T21:59:52.3413478Z + BRANCH_ARRAY=(${head//:/ })
+2023-05-01T21:59:52.3414194Z + TRY_ORG=matrix-org
+2023-05-01T21:59:52.3415043Z Trying to use matrix-org/matrix-react-sdk#null
+2023-05-01T21:59:52.3416474Z + TRY_BRANCH=null
+2023-05-01T21:59:52.3416903Z + [[ null == *\:* ]]
+2023-05-01T21:59:52.3417455Z + clone matrix-org matrix-react-sdk null
+2023-05-01T21:59:52.3417886Z + org=matrix-org
+2023-05-01T21:59:52.3418716Z + repo=matrix-react-sdk
+2023-05-01T21:59:52.3418990Z + branch=null
+2023-05-01T21:59:52.3419260Z + '[' -n null ']'
+2023-05-01T21:59:52.3419684Z + echo 'Trying to use matrix-org/matrix-react-sdk#null'
+2023-05-01T21:59:52.3419992Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:52.3420605Z + git clone https://github.com/matrix-org/matrix-react-sdk.git matrix-react-sdk --branch null --depth 1
+2023-05-01T21:59:52.3435297Z Cloning into 'matrix-react-sdk'...
+2023-05-01T21:59:52.5218188Z warning: Could not find remote branch null to clone.
+2023-05-01T21:59:52.5218982Z fatal: Remote branch null not found in upstream origin
+2023-05-01T21:59:52.5228357Z + '[' -n develop ']'
+2023-05-01T21:59:52.5229235Z Trying to use matrix-org/matrix-react-sdk#develop
+2023-05-01T21:59:52.5230456Z + clone matrix-org matrix-react-sdk develop
+2023-05-01T21:59:52.5232592Z + org=matrix-org
+2023-05-01T21:59:52.5233031Z + repo=matrix-react-sdk
+2023-05-01T21:59:52.5233408Z + branch=develop
+2023-05-01T21:59:52.5233888Z + '[' -n develop ']'
+2023-05-01T21:59:52.5235006Z + echo 'Trying to use matrix-org/matrix-react-sdk#develop'
+2023-05-01T21:59:52.5235354Z + GIT_TERMINAL_PROMPT=0
+2023-05-01T21:59:52.5236027Z + git clone https://github.com/matrix-org/matrix-react-sdk.git matrix-react-sdk --branch develop --depth 1
+2023-05-01T21:59:52.5253389Z Cloning into 'matrix-react-sdk'...
+2023-05-01T21:59:55.6896212Z + exit 0
+2023-05-01T21:59:55.6898143Z + pushd matrix-react-sdk
+2023-05-01T21:59:55.6898617Z + yarn link
+2023-05-01T21:59:55.6900474Z ~/work/element-web/element-web/matrix-react-sdk ~/work/element-web/element-web
+2023-05-01T21:59:55.8640954Z yarn link v1.22.19
+2023-05-01T21:59:55.9205922Z success Registered "matrix-react-sdk".
+2023-05-01T21:59:55.9210197Z info You can now run `yarn link "matrix-react-sdk"` in the projects where you want to use this package and it will be used instead.
+2023-05-01T21:59:55.9214732Z Done in 0.06s.
+2023-05-01T21:59:55.9319186Z + yarn link matrix-js-sdk
+2023-05-01T21:59:56.1038844Z yarn link v1.22.19
+2023-05-01T21:59:56.1579983Z success Using linked package for "matrix-js-sdk".
+2023-05-01T21:59:56.1580743Z Done in 0.06s.
+2023-05-01T21:59:56.1678622Z + yarn link @matrix-org/analytics-events
+2023-05-01T21:59:56.3414863Z yarn link v1.22.19
+2023-05-01T21:59:56.3958616Z success Using linked package for "@matrix-org/analytics-events".
+2023-05-01T21:59:56.3959351Z Done in 0.06s.
+2023-05-01T21:59:56.4060434Z + yarn install --frozen-lockfile
+2023-05-01T21:59:56.5802187Z yarn install v1.22.19
+2023-05-01T21:59:56.6849495Z [1/4] Resolving packages...
+2023-05-01T21:59:57.1309758Z [2/4] Fetching packages...
+2023-05-01T21:59:57.7314915Z [3/4] Linking dependencies...
+2023-05-01T21:59:57.7339418Z warning " > @matrix-org/matrix-wysiwyg@2.0.0" has incorrect peer dependency "react@^18.2.0".
+2023-05-01T21:59:57.7360318Z warning " > react-blurhash@0.3.0" has incorrect peer dependency "blurhash@^2.0.3".
+2023-05-01T21:59:57.7411645Z warning " > @testing-library/user-event@14.4.3" has unmet peer dependency "@testing-library/dom@>=7.21.4".
+2023-05-01T21:59:57.7427010Z warning " > cypress-multi-reporters@1.6.3" has unmet peer dependency "mocha@>=3.1.2".
+2023-05-01T21:59:57.7440838Z warning " > eslint-plugin-matrix-org@1.1.0" has incorrect peer dependency "prettier@2.8.0".
+2023-05-01T21:59:57.7450505Z warning " > mocha-junit-reporter@2.2.0" has unmet peer dependency "mocha@>=2.2.5".
+2023-05-01T21:59:57.7454200Z warning " > postcss-scss@4.0.6" has unmet peer dependency "postcss@^8.4.19".
+2023-05-01T21:59:57.7458180Z warning " > raw-loader@4.0.2" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+2023-05-01T22:00:07.5536940Z [4/4] Building fresh packages...
+2023-05-01T22:00:17.0780760Z Done in 20.50s.
+2023-05-01T22:00:17.1112935Z + popd
+2023-05-01T22:00:17.1113631Z ~/work/element-web/element-web
+2023-05-01T22:00:17.1114210Z + yarn link matrix-js-sdk
+2023-05-01T22:00:17.2853965Z yarn link v1.22.19
+2023-05-01T22:00:17.3840644Z success Using linked package for "matrix-js-sdk".
+2023-05-01T22:00:17.3841268Z Done in 0.10s.
+2023-05-01T22:00:17.3959102Z + yarn link matrix-react-sdk
+2023-05-01T22:00:17.5700576Z yarn link v1.22.19
+2023-05-01T22:00:17.8756165Z success Using linked package for "matrix-react-sdk".
+2023-05-01T22:00:17.8760011Z Done in 0.31s.
+2023-05-01T22:00:17.8952564Z ##[group]Run yarn build
+2023-05-01T22:00:17.8952880Z [36;1myarn build[0m
+2023-05-01T22:00:17.9007206Z shell: /usr/bin/bash -e {0}
+2023-05-01T22:00:17.9007438Z env:
+2023-05-01T22:00:17.9007676Z   REPOSITORY: ndren/element-web
+2023-05-01T22:00:17.9007924Z   PR_NUMBER: 5
+2023-05-01T22:00:17.9008151Z ##[endgroup]
+2023-05-01T22:00:18.0804245Z yarn run v1.22.19
+2023-05-01T22:00:18.1316642Z $ yarn clean && yarn build:genfiles && yarn build:bundle
+2023-05-01T22:00:18.3713672Z $ rimraf lib webapp
+2023-05-01T22:00:18.6967432Z $ yarn build:res && yarn build:jitsi && yarn build:module_system
+2023-05-01T22:00:18.9420929Z $ node scripts/copy-res.js
+2023-05-01T22:00:19.9389932Z $ node scripts/build-jitsi.js
+2023-05-01T22:00:20.0288059Z Making webapp directory
+2023-05-01T22:00:20.0300832Z Downloading Jitsi script
+2023-05-01T22:00:20.6430214Z Done with Jitsi download
+2023-05-01T22:00:20.8829626Z $ tsc --project ./tsconfig.module_system.json && node ./lib/module_system/scripts/install.js
+2023-05-01T22:00:23.4323203Z $ webpack --progress --bail --mode production
+2023-05-01T22:00:24.1444973Z Unset VERSION variable - this may affect build output
+2023-05-01T22:00:24.9027019Z /home/runner/work/element-web/element-web/node_modules/webpack-cli/bin/cli.js:281
+2023-05-01T22:00:24.9027765Z 				throw err;
+2023-05-01T22:00:24.9028822Z 				^
+2023-05-01T22:00:24.9029100Z 
+2023-05-01T22:00:24.9029720Z ValidationError: Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+2023-05-01T22:00:24.9030439Z  - configuration.node should be one of these:
+2023-05-01T22:00:24.9031053Z    false | object { __dirname?, __filename?, global? }
+2023-05-01T22:00:24.9032552Z    -> Include polyfills or mocks for various node stuff.
+2023-05-01T22:00:24.9081545Z    Details:
+2023-05-01T22:00:24.9083090Z     * configuration.node has an unknown property 'fs'. These properties are valid:
+2023-05-01T22:00:24.9083523Z       object { __dirname?, __filename?, global? }
+2023-05-01T22:00:24.9083984Z       -> Options object for node compatibility features.
+2023-05-01T22:00:24.9084676Z     * configuration.node has an unknown property 'net'. These properties are valid:
+2023-05-01T22:00:24.9085072Z       object { __dirname?, __filename?, global? }
+2023-05-01T22:00:24.9085485Z       -> Options object for node compatibility features.
+2023-05-01T22:00:24.9086003Z     * configuration.node has an unknown property 'tls'. These properties are valid:
+2023-05-01T22:00:24.9086376Z       object { __dirname?, __filename?, global? }
+2023-05-01T22:00:24.9086787Z       -> Options object for node compatibility features.
+2023-05-01T22:00:24.9087331Z     * configuration.node has an unknown property 'crypto'. These properties are valid:
+2023-05-01T22:00:24.9087725Z       object { __dirname?, __filename?, global? }
+2023-05-01T22:00:24.9088128Z       -> Options object for node compatibility features.
+2023-05-01T22:00:24.9088697Z  - configuration.optimization has an unknown property 'namedModules'. These properties are valid:
+2023-05-01T22:00:24.9089798Z    object { checkWasmTypes?, chunkIds?, concatenateModules?, emitOnErrors?, flagIncludedChunks?, innerGraph?, mangleExports?, mangleWasmImports?, mergeDuplicateChunks?, minimize?, minimizer?, moduleIds?, noEmitOnErrors?, nodeEnv?, portableRecords?, providedExports?, realContentHash?, removeAvailableModules?, removeEmptyChunks?, runtimeChunk?, sideEffects?, splitChunks?, usedExports? }
+2023-05-01T22:00:24.9090743Z    -> Enables/Disables integrated optimizations.
+2023-05-01T22:00:24.9091179Z    Did you mean optimization.moduleIds: "named" (BREAKING CHANGE since webpack 5)?
+2023-05-01T22:00:24.9092292Z     at validate (/home/runner/work/element-web/element-web/node_modules/webpack/node_modules/schema-utils/dist/validate.js:135:11)
+2023-05-01T22:00:24.9093101Z     at validateSchema (/home/runner/work/element-web/element-web/node_modules/webpack/lib/validateSchema.js:78:2)
+2023-05-01T22:00:24.9094153Z     at create (/home/runner/work/element-web/element-web/node_modules/webpack/lib/webpack.js:111:24)
+2023-05-01T22:00:24.9094792Z     at webpack (/home/runner/work/element-web/element-web/node_modules/webpack/lib/webpack.js:158:32)
+2023-05-01T22:00:24.9095393Z     at f (/home/runner/work/element-web/element-web/node_modules/webpack/lib/index.js:70:16)
+2023-05-01T22:00:24.9096032Z     at processOptions (/home/runner/work/element-web/element-web/node_modules/webpack-cli/bin/cli.js:272:16)
+2023-05-01T22:00:24.9096636Z     at /home/runner/work/element-web/element-web/node_modules/webpack-cli/bin/cli.js:364:3
+2023-05-01T22:00:24.9097300Z     at Object.parse (/home/runner/work/element-web/element-web/node_modules/webpack-cli/node_modules/yargs/yargs.js:576:18)
+2023-05-01T22:00:24.9098081Z     at /home/runner/work/element-web/element-web/node_modules/webpack-cli/bin/cli.js:49:8
+2023-05-01T22:00:24.9098884Z     at Object.<anonymous> (/home/runner/work/element-web/element-web/node_modules/webpack-cli/bin/cli.js:366:3)
+2023-05-01T22:00:24.9099343Z     at Module._compile (node:internal/modules/cjs/loader:1254:14)
+2023-05-01T22:00:24.9099751Z     at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+2023-05-01T22:00:24.9100143Z     at Module.load (node:internal/modules/cjs/loader:1117:32)
+2023-05-01T22:00:24.9100517Z     at Module._load (node:internal/modules/cjs/loader:958:12)
+2023-05-01T22:00:24.9100896Z     at Module.require (node:internal/modules/cjs/loader:1141:19)
+2023-05-01T22:00:24.9101313Z     at require (node:internal/modules/cjs/helpers:110:18)
+2023-05-01T22:00:24.9102014Z     at runCli (/home/runner/work/element-web/element-web/node_modules/webpack/bin/webpack.js:82:2)
+2023-05-01T22:00:24.9102656Z     at Object.<anonymous> (/home/runner/work/element-web/element-web/node_modules/webpack/bin/webpack.js:175:2)
+2023-05-01T22:00:24.9103113Z     at Module._compile (node:internal/modules/cjs/loader:1254:14)
+2023-05-01T22:00:24.9103518Z     at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+2023-05-01T22:00:24.9103916Z     at Module.load (node:internal/modules/cjs/loader:1117:32)
+2023-05-01T22:00:24.9104279Z     at Module._load (node:internal/modules/cjs/loader:958:12)
+2023-05-01T22:00:24.9104724Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+2023-05-01T22:00:24.9105131Z     at node:internal/main/run_main_module:23:47 {
+2023-05-01T22:00:24.9105392Z   errors: [
+2023-05-01T22:00:24.9105597Z     {
+2023-05-01T22:00:24.9105848Z       keyword: 'anyOf',
+2023-05-01T22:00:24.9106110Z       dataPath: '.node',
+2023-05-01T22:00:24.9106404Z       schemaPath: '#/anyOf',
+2023-05-01T22:00:24.9106652Z       params: {},
+2023-05-01T22:00:24.9107017Z       message: 'should match some schema in anyOf',
+2023-05-01T22:00:24.9107487Z       schema: [ { enum: [ false ] }, { '$ref': '#/definitions/NodeOptions' } ],
+2023-05-01T22:00:24.9107789Z       parentSchema: {
+2023-05-01T22:00:24.9108217Z         description: 'Include polyfills or mocks for various node stuff.',
+2023-05-01T22:00:24.9108730Z         anyOf: [ { enum: [Array] }, { '$ref': '#/definitions/NodeOptions' } ]
+2023-05-01T22:00:24.9109007Z       },
+2023-05-01T22:00:24.9109403Z       data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9109690Z       children: [
+2023-05-01T22:00:24.9109892Z         {
+2023-05-01T22:00:24.9110146Z           keyword: 'enum',
+2023-05-01T22:00:24.9110429Z           dataPath: '.node',
+2023-05-01T22:00:24.9110760Z           schemaPath: '#/anyOf/0/enum',
+2023-05-01T22:00:24.9111071Z           params: { allowedValues: [Array] },
+2023-05-01T22:00:24.9111497Z           message: 'should be equal to one of the allowed values',
+2023-05-01T22:00:24.9111775Z           schema: [ false ],
+2023-05-01T22:00:24.9112061Z           parentSchema: { enum: [Array] },
+2023-05-01T22:00:24.9112515Z           data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9112814Z           children: undefined
+2023-05-01T22:00:24.9113043Z         },
+2023-05-01T22:00:24.9113227Z         {
+2023-05-01T22:00:24.9113727Z           keyword: 'additionalProperties',
+2023-05-01T22:00:24.9114051Z           dataPath: '.node',
+2023-05-01T22:00:24.9114489Z           schemaPath: '#/definitions/NodeOptions/additionalProperties',
+2023-05-01T22:00:24.9114922Z           params: { additionalProperty: 'fs' },
+2023-05-01T22:00:24.9115347Z           message: 'should NOT have additional properties',
+2023-05-01T22:00:24.9115616Z           schema: false,
+2023-05-01T22:00:24.9115862Z           parentSchema: {
+2023-05-01T22:00:24.9116297Z             description: 'Options object for node compatibility features.',
+2023-05-01T22:00:24.9116771Z             type: 'object',
+2023-05-01T22:00:24.9117062Z             additionalProperties: false,
+2023-05-01T22:00:24.9117402Z             properties: [Object]
+2023-05-01T22:00:24.9117619Z           },
+2023-05-01T22:00:24.9118038Z           data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9118339Z           children: undefined
+2023-05-01T22:00:24.9118570Z         },
+2023-05-01T22:00:24.9118777Z         {
+2023-05-01T22:00:24.9119090Z           keyword: 'additionalProperties',
+2023-05-01T22:00:24.9119411Z           dataPath: '.node',
+2023-05-01T22:00:24.9119847Z           schemaPath: '#/definitions/NodeOptions/additionalProperties',
+2023-05-01T22:00:24.9120284Z           params: { additionalProperty: 'net' },
+2023-05-01T22:00:24.9120705Z           message: 'should NOT have additional properties',
+2023-05-01T22:00:24.9120981Z           schema: false,
+2023-05-01T22:00:24.9121206Z           parentSchema: {
+2023-05-01T22:00:24.9121637Z             description: 'Options object for node compatibility features.',
+2023-05-01T22:00:24.9121985Z             type: 'object',
+2023-05-01T22:00:24.9122272Z             additionalProperties: false,
+2023-05-01T22:00:24.9122562Z             properties: [Object]
+2023-05-01T22:00:24.9122781Z           },
+2023-05-01T22:00:24.9123332Z           data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9123638Z           children: undefined
+2023-05-01T22:00:24.9123864Z         },
+2023-05-01T22:00:24.9124063Z         {
+2023-05-01T22:00:24.9124388Z           keyword: 'additionalProperties',
+2023-05-01T22:00:24.9124696Z           dataPath: '.node',
+2023-05-01T22:00:24.9125133Z           schemaPath: '#/definitions/NodeOptions/additionalProperties',
+2023-05-01T22:00:24.9125576Z           params: { additionalProperty: 'tls' },
+2023-05-01T22:00:24.9126001Z           message: 'should NOT have additional properties',
+2023-05-01T22:00:24.9126292Z           schema: false,
+2023-05-01T22:00:24.9126516Z           parentSchema: {
+2023-05-01T22:00:24.9126956Z             description: 'Options object for node compatibility features.',
+2023-05-01T22:00:24.9127296Z             type: 'object',
+2023-05-01T22:00:24.9127582Z             additionalProperties: false,
+2023-05-01T22:00:24.9127872Z             properties: [Object]
+2023-05-01T22:00:24.9128100Z           },
+2023-05-01T22:00:24.9128500Z           data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9128797Z           children: undefined
+2023-05-01T22:00:24.9129027Z         },
+2023-05-01T22:00:24.9129229Z         {
+2023-05-01T22:00:24.9129553Z           keyword: 'additionalProperties',
+2023-05-01T22:00:24.9129858Z           dataPath: '.node',
+2023-05-01T22:00:24.9130291Z           schemaPath: '#/definitions/NodeOptions/additionalProperties',
+2023-05-01T22:00:24.9130736Z           params: { additionalProperty: 'crypto' },
+2023-05-01T22:00:24.9131168Z           message: 'should NOT have additional properties',
+2023-05-01T22:00:24.9131453Z           schema: false,
+2023-05-01T22:00:24.9131690Z           parentSchema: {
+2023-05-01T22:00:24.9132111Z             description: 'Options object for node compatibility features.',
+2023-05-01T22:00:24.9132454Z             type: 'object',
+2023-05-01T22:00:24.9132743Z             additionalProperties: false,
+2023-05-01T22:00:24.9133041Z             properties: [Object]
+2023-05-01T22:00:24.9133268Z           },
+2023-05-01T22:00:24.9133817Z           data: { fs: 'empty', net: 'empty', tls: 'empty', crypto: 'empty' },
+2023-05-01T22:00:24.9134109Z           children: undefined
+2023-05-01T22:00:24.9134336Z         }
+2023-05-01T22:00:24.9134541Z       ]
+2023-05-01T22:00:24.9134734Z     },
+2023-05-01T22:00:24.9134928Z     {
+2023-05-01T22:00:24.9135230Z       keyword: 'additionalProperties',
+2023-05-01T22:00:24.9135584Z       dataPath: '.optimization',
+2023-05-01T22:00:24.9135955Z       schemaPath: '#/additionalProperties',
+2023-05-01T22:00:24.9136372Z       params: { additionalProperty: 'namedModules' },
+2023-05-01T22:00:24.9136923Z       message: 'should NOT have additional properties',
+2023-05-01T22:00:24.9137188Z       schema: false,
+2023-05-01T22:00:24.9137423Z       parentSchema: {
+2023-05-01T22:00:24.9137845Z         description: 'Enables/Disables integrated optimizations.',
+2023-05-01T22:00:24.9138179Z         type: 'object',
+2023-05-01T22:00:24.9138460Z         additionalProperties: false,
+2023-05-01T22:00:24.9138727Z         properties: {
+2023-05-01T22:00:24.9138963Z           checkWasmTypes: {
+2023-05-01T22:00:24.9139467Z             description: 'Check for incompatible wasm types when importing/exporting from/to ESM.',
+2023-05-01T22:00:24.9139843Z             type: 'boolean'
+2023-05-01T22:00:24.9140067Z           },
+2023-05-01T22:00:24.9140279Z           chunkIds: {
+2023-05-01T22:00:24.9141460Z             description: 'Define the algorithm to choose chunk ids (named: readable ids for better debugging, deterministic: numeric hash ids for better long term caching, size: numeric ids focused on minimal initial download size, total-size: numeric ids focused on minimal total download size, false: no algorithm used, as custom one can be provided via plugin).',
+2023-05-01T22:00:24.9152122Z             enum: [Array]
+2023-05-01T22:00:24.9152354Z           },
+2023-05-01T22:00:24.9152630Z           concatenateModules: {
+2023-05-01T22:00:24.9153435Z             description: 'Concatenate modules when possible to generate less modules, more efficient code and enable more optimizations by the minimizer.',
+2023-05-01T22:00:24.9153876Z             type: 'boolean'
+2023-05-01T22:00:24.9154097Z           },
+2023-05-01T22:00:24.9154308Z           emitOnErrors: {
+2023-05-01T22:00:24.9154935Z             description: 'Emit assets even when errors occur. Critical errors are emitted into the generated code and will cause errors at runtime.',
+2023-05-01T22:00:24.9155358Z             type: 'boolean'
+2023-05-01T22:00:24.9155578Z           },
+2023-05-01T22:00:24.9155830Z           flagIncludedChunks: {
+2023-05-01T22:00:24.9156318Z             description: 'Also flag chunks as loaded which contain a subset of the modules.',
+2023-05-01T22:00:24.9156681Z             type: 'boolean'
+2023-05-01T22:00:24.9156903Z           },
+2023-05-01T22:00:24.9157121Z           innerGraph: {
+2023-05-01T22:00:24.9157757Z             description: 'Creates a module-internal dependency graph for top level symbols, exports and imports, to improve unused exports detection.',
+2023-05-01T22:00:24.9158201Z             type: 'boolean'
+2023-05-01T22:00:24.9158420Z           },
+2023-05-01T22:00:24.9158632Z           mangleExports: {
+2023-05-01T22:00:24.9159633Z             description: 'Rename exports when possible to generate shorter code (depends on optimization.usedExports and optimization.providedExports, true/"deterministic": generate short deterministic names optimized for caching, "size": generate the shortest possible names).',
+2023-05-01T22:00:24.9160220Z             anyOf: [Array]
+2023-05-01T22:00:24.9160443Z           },
+2023-05-01T22:00:24.9160694Z           mangleWasmImports: {
+2023-05-01T22:00:24.9161172Z             description: 'Reduce size of WASM by changing imports to shorter strings.',
+2023-05-01T22:00:24.9161524Z             type: 'boolean'
+2023-05-01T22:00:24.9161729Z           },
+2023-05-01T22:00:24.9161994Z           mergeDuplicateChunks: {
+2023-05-01T22:00:24.9162433Z             description: 'Merge chunks which contain the same modules.',
+2023-05-01T22:00:24.9163444Z             type: 'boolean'
+2023-05-01T22:00:24.9163683Z           },
+2023-05-01T22:00:24.9163885Z           minimize: {
+2023-05-01T22:00:24.9164362Z             description: 'Enable minimizing the output. Uses optimization.minimizer.',
+2023-05-01T22:00:24.9164732Z             type: 'boolean'
+2023-05-01T22:00:24.9164950Z           },
+2023-05-01T22:00:24.9165168Z           minimizer: {
+2023-05-01T22:00:24.9165576Z             description: 'Minimizer(s) to use for minimizing the output.',
+2023-05-01T22:00:24.9165914Z             type: 'array',
+2023-05-01T22:00:24.9166143Z             cli: [Object],
+2023-05-01T22:00:24.9166500Z             items: [Object]
+2023-05-01T22:00:24.9166718Z           },
+2023-05-01T22:00:24.9166932Z           moduleIds: {
+2023-05-01T22:00:24.9168208Z             description: 'Define the algorithm to choose module ids (natural: numeric ids in order of usage, named: readable ids for better debugging, hashed: (deprecated) short hashes as ids for better long term caching, deterministic: numeric hash ids for better long term caching, size: numeric ids focused on minimal initial download size, false: no algorithm used, as custom one can be provided via plugin).',
+2023-05-01T22:00:24.9168899Z             enum: [Array]
+2023-05-01T22:00:24.9169116Z           },
+2023-05-01T22:00:24.9169340Z           noEmitOnErrors: {
+2023-05-01T22:00:24.9169876Z             description: "Avoid emitting assets when errors occur (deprecated: use 'emitOnErrors' instead).",
+2023-05-01T22:00:24.9170261Z             type: 'boolean',
+2023-05-01T22:00:24.9170494Z             cli: [Object]
+2023-05-01T22:00:24.9170703Z           },
+2023-05-01T22:00:24.9170915Z           nodeEnv: {
+2023-05-01T22:00:24.9171336Z             description: 'Set process.env.NODE_ENV to a specific value.',
+2023-05-01T22:00:24.9171639Z             anyOf: [Array]
+2023-05-01T22:00:24.9171856Z           },
+2023-05-01T22:00:24.9172070Z           portableRecords: {
+2023-05-01T22:00:24.9172588Z             description: 'Generate records with relative paths to be able to move the context folder.',
+2023-05-01T22:00:24.9172964Z             type: 'boolean'
+2023-05-01T22:00:24.9173183Z           },
+2023-05-01T22:00:24.9173410Z           providedExports: {
+2023-05-01T22:00:24.9173935Z             description: 'Figure out which exports are provided by modules to generate more efficient code.',
+2023-05-01T22:00:24.9174298Z             type: 'boolean'
+2023-05-01T22:00:24.9174516Z           },
+2023-05-01T22:00:24.9174739Z           realContentHash: {
+2023-05-01T22:00:24.9175206Z             description: 'Use real [contenthash] based on final content of the assets.',
+2023-05-01T22:00:24.9175562Z             type: 'boolean'
+2023-05-01T22:00:24.9175779Z           },
+2023-05-01T22:00:24.9176029Z           removeAvailableModules: {
+2023-05-01T22:00:24.9176575Z             description: 'Removes modules from chunks when these modules are already included in all parents.',
+2023-05-01T22:00:24.9176954Z             type: 'boolean'
+2023-05-01T22:00:24.9177172Z           },
+2023-05-01T22:00:24.9177431Z           removeEmptyChunks: {
+2023-05-01T22:00:24.9177815Z             description: 'Remove chunks which are empty.',
+2023-05-01T22:00:24.9178130Z             type: 'boolean'
+2023-05-01T22:00:24.9178351Z           },
+2023-05-01T22:00:24.9178784Z           runtimeChunk: { '$ref': '#/definitions/OptimizationRuntimeChunk' },
+2023-05-01T22:00:24.9179100Z           sideEffects: {
+2023-05-01T22:00:24.9179899Z             description: "Skip over modules which contain no side effects when exports are not used (false: disabled, 'flag': only use manually placed side effects flag, true: also analyse source code for side effects).",
+2023-05-01T22:00:24.9180352Z             anyOf: [Array]
+2023-05-01T22:00:24.9180568Z           },
+2023-05-01T22:00:24.9180791Z           splitChunks: {
+2023-05-01T22:00:24.9181326Z             description: 'Optimize duplication and caching by splitting chunks by shared modules and cache group.',
+2023-05-01T22:00:24.9181676Z             anyOf: [Array]
+2023-05-01T22:00:24.9182014Z           },
+2023-05-01T22:00:24.9182227Z           usedExports: {
+2023-05-01T22:00:24.9183130Z             description: 'Figure out which exports are used by modules to mangle export names, omit unused exports and generate more efficient code (true: analyse used exports for each runtime, "global": analyse exports globally for all runtimes combined).',
+2023-05-01T22:00:24.9183648Z             anyOf: [Array]
+2023-05-01T22:00:24.9183868Z           }
+2023-05-01T22:00:24.9184068Z         }
+2023-05-01T22:00:24.9184262Z       },
+2023-05-01T22:00:24.9184452Z       data: {
+2023-05-01T22:00:24.9184911Z         splitChunks: { cacheGroups: { styles: [Object], default: [Object] } },
+2023-05-01T22:00:24.9185226Z         namedModules: false,
+2023-05-01T22:00:24.9185467Z         minimize: true,
+2023-05-01T22:00:24.9185696Z         minimizer: [
+2023-05-01T22:00:24.9185977Z           TerserPlugin { options: [Object] },
+2023-05-01T22:00:24.9186318Z           OptimizeCssAssetsWebpackPlugin {
+2023-05-01T22:00:24.9186658Z             pluginDescriptor: [Object],
+2023-05-01T22:00:24.9186942Z             options: [Object],
+2023-05-01T22:00:24.9187243Z             phaseAssetProcessors: [Object],
+2023-05-01T22:00:24.9187538Z             deleteAssetsMap: {}
+2023-05-01T22:00:24.9187757Z           }
+2023-05-01T22:00:24.9188138Z         ],
+2023-05-01T22:00:24.9188421Z         nodeEnv: 'production'
+2023-05-01T22:00:24.9188649Z       }
+2023-05-01T22:00:24.9188847Z     }
+2023-05-01T22:00:24.9189026Z   ],
+2023-05-01T22:00:24.9189225Z   schema: {
+2023-05-01T22:00:24.9189444Z     definitions: {
+2023-05-01T22:00:24.9189670Z       Amd: {
+2023-05-01T22:00:24.9190177Z         description: 'Set the value of `require.amd` and `define.amd`. Or disable AMD support.',
+2023-05-01T22:00:24.9190494Z         anyOf: [
+2023-05-01T22:00:24.9190689Z           {
+2023-05-01T22:00:24.9191092Z             description: 'You can pass `false` to disable AMD support.',
+2023-05-01T22:00:24.9191388Z             enum: [Array]
+2023-05-01T22:00:24.9191602Z           },
+2023-05-01T22:00:24.9191810Z           {
+2023-05-01T22:00:24.9192284Z             description: 'You can pass an object to set the value of `require.amd` and `define.amd`.',
+2023-05-01T22:00:24.9192652Z             type: 'object'
+2023-05-01T22:00:24.9192872Z           }
+2023-05-01T22:00:24.9193071Z         ]
+2023-05-01T22:00:24.9193268Z       },
+2023-05-01T22:00:24.9193470Z       AmdContainer: {
+2023-05-01T22:00:24.9193934Z         description: 'Add a container for define/require functions in the AMD module.',
+2023-05-01T22:00:24.9194285Z         type: 'string',
+2023-05-01T22:00:24.9194520Z         minLength: 1
+2023-05-01T22:00:24.9194737Z       },
+2023-05-01T22:00:24.9194969Z       AssetFilterItemTypes: {
+2023-05-01T22:00:24.9195368Z         description: 'Filtering value, regexp or function.',
+2023-05-01T22:00:24.9195684Z         cli: { helper: true },
+2023-05-01T22:00:24.9195914Z         anyOf: [
+2023-05-01T22:00:24.9196273Z           { instanceof: 'RegExp', tsType: 'RegExp' },
+2023-05-01T22:00:24.9196676Z           { type: 'string', absolutePath: false },
+2023-05-01T22:00:24.9196916Z           {
+2023-05-01T22:00:24.9197217Z             instanceof: 'Function',
+2023-05-01T22:00:24.9197771Z             tsType: "((name: string, asset: import('../lib/stats/DefaultStatsFactoryPlugin').StatsAsset) => boolean)"
+2023-05-01T22:00:24.9198108Z           }
+2023-05-01T22:00:24.9198309Z         ]
+2023-05-01T22:00:24.9198507Z       },
+2023-05-01T22:00:24.9198716Z       AssetFilterTypes: {
+2023-05-01T22:00:24.9199065Z         description: 'Filtering modules.',
+2023-05-01T22:00:24.9199351Z         cli: { helper: true },
+2023-05-01T22:00:24.9199585Z         anyOf: [
+2023-05-01T22:00:24.9199911Z           { type: 'array', items: [Object] },
+2023-05-01T22:00:24.9200308Z           { '$ref': '#/definitions/AssetFilterItemTypes' }
+2023-05-01T22:00:24.9200575Z         ]
+2023-05-01T22:00:24.9200773Z       },
+2023-05-01T22:00:24.9201025Z       AssetGeneratorDataUrl: {
+2023-05-01T22:00:24.9201566Z         description: 'The options for data url generator.',
+2023-05-01T22:00:24.9201834Z         anyOf: [
+2023-05-01T22:00:24.9202250Z           { '$ref': '#/definitions/AssetGeneratorDataUrlOptions' },
+2023-05-01T22:00:24.9202750Z           { '$ref': '#/definitions/AssetGeneratorDataUrlFunction' }
+2023-05-01T22:00:24.9203365Z         ]
+2023-05-01T22:00:24.9203565Z       },
+2023-05-01T22:00:24.9203843Z       AssetGeneratorDataUrlFunction: {
+2023-05-01T22:00:24.9204566Z         description: "Function that executes for module and should return an DataUrl string. It can have a string as 'ident' property which contributes to the module hash.",
+2023-05-01T22:00:24.9205193Z         instanceof: 'Function',
+2023-05-01T22:00:24.9205743Z         tsType: "((source: string | Buffer, context: { filename: string, module: import('../lib/Module') }) => string)"
+2023-05-01T22:00:24.9206068Z       },
+2023-05-01T22:00:24.9206345Z       AssetGeneratorDataUrlOptions: {
+2023-05-01T22:00:24.9206784Z         description: 'Options object for data url generation.',
+2023-05-01T22:00:24.9207102Z         type: 'object',
+2023-05-01T22:00:24.9207384Z         additionalProperties: false,
+2023-05-01T22:00:24.9207649Z         properties: {
+2023-05-01T22:00:24.9207878Z           encoding: {
+2023-05-01T22:00:24.9208277Z             description: 'Asset encoding (defaults to base64).',
+2023-05-01T22:00:24.9208563Z             enum: [Array]
+2023-05-01T22:00:24.9208765Z           },
+2023-05-01T22:00:24.9208978Z           mimetype: {
+2023-05-01T22:00:24.9209421Z             description: 'Asset mimetype (getting from file extension by default).',
+2023-05-01T22:00:24.9209774Z             type: 'string'
+2023-05-01T22:00:24.9209994Z           }
+2023-05-01T22:00:24.9210185Z         }
+2023-05-01T22:00:24.9210385Z       },
+2023-05-01T22:00:24.9210640Z       AssetGeneratorOptions: {
+2023-05-01T22:00:24.9211053Z         description: 'Generator options for asset modules.',
+2023-05-01T22:00:24.9211370Z         type: 'object',
+2023-05-01T22:00:24.9211585Z         implements: [
+2023-05-01T22:00:24.9211978Z           '#/definitions/AssetInlineGeneratorOptions',
+2023-05-01T22:00:24.9212427Z           '#/definitions/AssetResourceGeneratorOptions'
+2023-05-01T22:00:24.9212706Z         ],
+2023-05-01T22:00:24.9212971Z         additionalProperties: false,
+2023-05-01T22:00:24.9213234Z         properties: {
+2023-05-01T22:00:24.9213650Z           dataUrl: { '$ref': '#/definitions/AssetGeneratorDataUrl' },
+2023-05-01T22:00:24.9213937Z           emit: {
+2023-05-01T22:00:24.9214507Z             description: "Emit an output asset from this asset module. This can be set to 'false' to omit emitting e. g. for SSR.",
+2023-05-01T22:00:24.9214905Z             type: 'boolean'
+2023-05-01T22:00:24.9215126Z           },
+2023-05-01T22:00:24.9215510Z           filename: { '$ref': '#/definitions/FilenameTemplate' },
+2023-05-01T22:00:24.9215986Z           outputPath: { '$ref': '#/definitions/AssetModuleOutputPath' },
+2023-05-01T22:00:24.9216453Z           publicPath: { '$ref': '#/definitions/RawPublicPath' }
+2023-05-01T22:00:24.9216731Z         }
+2023-05-01T22:00:24.9216937Z       },
+2023-05-01T22:00:24.9217213Z       AssetInlineGeneratorOptions: {
+2023-05-01T22:00:24.9217682Z         description: 'Generator options for asset/inline modules.',
+2023-05-01T22:00:24.9218009Z         type: 'object',
+2023-05-01T22:00:24.9218294Z         additionalProperties: false,
+2023-05-01T22:00:24.9218782Z         properties: { dataUrl: { '$ref': '#/definitions/AssetGeneratorDataUrl' } }
+2023-05-01T22:00:24.9219157Z       },
+2023-05-01T22:00:24.9219387Z       AssetModuleFilename: {
+2023-05-01T22:00:24.9219912Z         description: "The filename of asset modules as relative path inside the 'output.path' directory.",
+2023-05-01T22:00:24.9220259Z         anyOf: [
+2023-05-01T22:00:24.9220608Z           { type: 'string', absolutePath: false },
+2023-05-01T22:00:24.9220866Z           {
+2023-05-01T22:00:24.9221165Z             instanceof: 'Function',
+2023-05-01T22:00:24.9221917Z             tsType: '((pathData: import("../lib/Compilation").PathData, assetInfo?: import("../lib/Compilation").AssetInfo) => string)'
+2023-05-01T22:00:24.9222263Z           }
+2023-05-01T22:00:24.9222468Z         ]
+2023-05-01T22:00:24.9222669Z       },
+2023-05-01T22:00:24.9222922Z       AssetModuleOutputPath: {
+2023-05-01T22:00:24.9225204Z         description: "Emit the asset in the specified folder relative to 'output.path'. This should only be needed when custom 'publicPath' is specified to match the folder structure there.",
+2023-05-01T22:00:24.9225651Z         anyOf: [
+2023-05-01T22:00:24.9226025Z           { type: 'string', absolutePath: false },
+2023-05-01T22:00:24.9226452Z           {
+2023-05-01T22:00:24.9226754Z             instanceof: 'Function',
+2023-05-01T22:00:24.9227360Z             tsType: '((pathData: import("../lib/Compilation").PathData, assetInfo?: import("../lib/Compilation").AssetInfo) => string)'
+2023-05-01T22:00:24.9227708Z           }
+2023-05-01T22:00:24.9227910Z         ]
+2023-05-01T22:00:24.9228098Z       },
+2023-05-01T22:00:24.9228367Z       AssetParserDataUrlFunction: {
+2023-05-01T22:00:24.9228956Z         description: 'Function that executes for module and should return whenever asset should be inlined as DataUrl.',
+2023-05-01T22:00:24.9229389Z         instanceof: 'Function',
+2023-05-01T22:00:24.9229934Z         tsType: "((source: string | Buffer, context: { filename: string, module: import('../lib/Module') }) => boolean)"
+2023-05-01T22:00:24.9230241Z       },
+2023-05-01T22:00:24.9230513Z       AssetParserDataUrlOptions: {
+2023-05-01T22:00:24.9231479Z         description: 'Options object for DataUrl condition.',
+2023-05-01T22:00:24.9231805Z         type: 'object',
+2023-05-01T22:00:24.9232096Z         additionalProperties: false,
+2023-05-01T22:00:24.9232362Z         properties: {
+2023-05-01T22:00:24.9232577Z           maxSize: {
+2023-05-01T22:00:24.9233059Z             description: 'Maximum size of asset that should be inline as modules. Default: 8kb.',
+2023-05-01T22:00:24.9233422Z             type: 'number'
+2023-05-01T22:00:24.9233641Z           }
+2023-05-01T22:00:24.9233850Z         }
+2023-05-01T22:00:24.9234048Z       },
+2023-05-01T22:00:24.9234263Z       AssetParserOptions: {
+2023-05-01T22:00:24.9234661Z         description: 'Parser options for asset modules.',
+2023-05-01T22:00:24.9234980Z         type: 'object',
+2023-05-01T22:00:24.9235258Z         additionalProperties: false,
+2023-05-01T22:00:24.9235518Z         properties: {
+2023-05-01T22:00:24.9235754Z           dataUrlCondition: {
+2023-05-01T22:00:24.9236201Z             description: 'The condition for inlining the asset as DataUrl.',
+2023-05-01T22:00:24.9236508Z             anyOf: [Array]
+2023-05-01T22:00:24.9236732Z           }
+2023-05-01T22:00:24.9236933Z         }
+2023-05-01T22:00:24.9237117Z       },
+2023-05-01T22:00:24.9237394Z       AssetResourceGeneratorOptions: {
+2023-05-01T22:00:24.9237851Z         description: 'Generator options for asset/resource modules.',
+2023-05-01T22:00:24.9238185Z         type: 'object',
+2023-05-01T22:00:24.9238464Z         additionalProperties: false,
+2023-05-01T22:00:24.9238738Z         properties: {
+2023-05-01T22:00:24.9238951Z           emit: {
+2023-05-01T22:00:24.9239507Z             description: "Emit an output asset from this asset module. This can be set to 'false' to omit emitting e. g. for SSR.",
+2023-05-01T22:00:24.9239901Z             type: 'boolean'
+2023-05-01T22:00:24.9240122Z           },
+2023-05-01T22:00:24.9240509Z           filename: { '$ref': '#/definitions/FilenameTemplate' },
+2023-05-01T22:00:24.9240994Z           outputPath: { '$ref': '#/definitions/AssetModuleOutputPath' },
+2023-05-01T22:00:24.9241453Z           publicPath: { '$ref': '#/definitions/RawPublicPath' }
+2023-05-01T22:00:24.9241734Z         }
+2023-05-01T22:00:24.9241934Z       },
+2023-05-01T22:00:24.9242158Z       AuxiliaryComment: {
+2023-05-01T22:00:24.9242543Z         description: 'Add a comment in the UMD wrapper.',
+2023-05-01T22:00:24.9242976Z         anyOf: [
+2023-05-01T22:00:24.9243193Z           {
+2023-05-01T22:00:24.9243615Z             description: 'Append the same comment above each import style.',
+2023-05-01T22:00:24.9244117Z             type: 'string'
+2023-05-01T22:00:24.9244343Z           },
+2023-05-01T22:00:24.9244753Z           { '$ref': '#/definitions/LibraryCustomUmdCommentObject' }
+2023-05-01T22:00:24.9245036Z         ]
+2023-05-01T22:00:24.9245235Z       },
+2023-05-01T22:00:24.9245437Z       Bail: {
+2023-05-01T22:00:24.9245891Z         description: 'Report the first error as a hard error instead of tolerating it.',
+2023-05-01T22:00:24.9246251Z         type: 'boolean'
+2023-05-01T22:00:24.9246456Z       },
+2023-05-01T22:00:24.9246673Z       CacheOptions: {
+2023-05-01T22:00:24.9247353Z         description: 'Cache generated modules and chunks to improve performance for multiple incremental builds.',
+2023-05-01T22:00:24.9247702Z         anyOf: [
+2023-05-01T22:00:24.9248113Z           { description: 'Enable in memory caching.', enum: [Array] },
+2023-05-01T22:00:24.9248566Z           { '$ref': '#/definitions/CacheOptionsNormalized' }
+2023-05-01T22:00:24.9248826Z         ]
+2023-05-01T22:00:24.9249033Z       },
+2023-05-01T22:00:24.9249295Z       CacheOptionsNormalized: {
+2023-05-01T22:00:24.9249863Z         description: 'Cache generated modules and chunks to improve performance for multiple incremental builds.',
+2023-05-01T22:00:24.9250210Z         anyOf: [
+2023-05-01T22:00:24.9250578Z           { description: 'Disable caching.', enum: [Array] },
+2023-05-01T22:00:24.9251007Z           { '$ref': '#/definitions/MemoryCacheOptions' },
+2023-05-01T22:00:24.9251425Z           { '$ref': '#/definitions/FileCacheOptions' }
+2023-05-01T22:00:24.9251684Z         ]
+2023-05-01T22:00:24.9251894Z       },
+2023-05-01T22:00:24.9252107Z       Charset: {
+2023-05-01T22:00:24.9252482Z         description: 'Add charset attribute for script tag.',
+2023-05-01T22:00:24.9252871Z         type: 'boolean'
+2023-05-01T22:00:24.9253225Z       },
+2023-05-01T22:00:24.9253442Z       ChunkFilename: {
+2023-05-01T22:00:24.9254488Z         description: "Specifies the filename template of output files of non-initial chunks on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9255234Z         oneOf: [ { '$ref': '#/definitions/FilenameTemplate' } ]
+2023-05-01T22:00:24.9255492Z       },
+2023-05-01T22:00:24.9255706Z       ChunkFormat: {
+2023-05-01T22:00:24.9256433Z         description: "The format of chunks (formats included by default are 'array-push' (web/WebWorker), 'commonjs' (node.js), 'module' (ESM), but others might be added by plugins).",
+2023-05-01T22:00:24.9256999Z         anyOf: [ { enum: [Array] }, { type: 'string' } ]
+2023-05-01T22:00:24.9257250Z       },
+2023-05-01T22:00:24.9257474Z       ChunkLoadTimeout: {
+2023-05-01T22:00:24.9257906Z         description: 'Number of milliseconds before chunk request expires.',
+2023-05-01T22:00:24.9258249Z         type: 'number'
+2023-05-01T22:00:24.9258465Z       },
+2023-05-01T22:00:24.9258677Z       ChunkLoading: {
+2023-05-01T22:00:24.9259534Z         description: "The method of loading chunks (methods included by default are 'jsonp' (web), 'import' (ESM), 'importScripts' (WebWorker), 'require' (sync node.js), 'async-node' (async node.js), but others might be added by plugins).",
+2023-05-01T22:00:24.9260019Z         anyOf: [
+2023-05-01T22:00:24.9260231Z           { enum: [Array] },
+2023-05-01T22:00:24.9260602Z           { '$ref': '#/definitions/ChunkLoadingType' }
+2023-05-01T22:00:24.9260862Z         ]
+2023-05-01T22:00:24.9261060Z       },
+2023-05-01T22:00:24.9261286Z       ChunkLoadingGlobal: {
+2023-05-01T22:00:24.9261759Z         description: 'The global variable used by webpack for loading of chunks.',
+2023-05-01T22:00:24.9262093Z         type: 'string'
+2023-05-01T22:00:24.9262312Z       },
+2023-05-01T22:00:24.9262542Z       ChunkLoadingType: {
+2023-05-01T22:00:24.9263522Z         description: "The method of loading chunks (methods included by default are 'jsonp' (web), 'import' (ESM), 'importScripts' (WebWorker), 'require' (sync node.js), 'async-node' (async node.js), but others might be added by plugins).",
+2023-05-01T22:00:24.9264156Z         anyOf: [ { enum: [Array] }, { type: 'string' } ]
+2023-05-01T22:00:24.9264407Z       },
+2023-05-01T22:00:24.9264596Z       Clean: {
+2023-05-01T22:00:24.9264990Z         description: 'Clean the output directory before emit.',
+2023-05-01T22:00:24.9265271Z         anyOf: [
+2023-05-01T22:00:24.9265562Z           { type: 'boolean' },
+2023-05-01T22:00:24.9265927Z           { '$ref': '#/definitions/CleanOptions' }
+2023-05-01T22:00:24.9266181Z         ]
+2023-05-01T22:00:24.9266498Z       },
+2023-05-01T22:00:24.9266712Z       CleanOptions: {
+2023-05-01T22:00:24.9267113Z         description: 'Advanced options for cleaning assets.',
+2023-05-01T22:00:24.9267437Z         type: 'object',
+2023-05-01T22:00:24.9267719Z         additionalProperties: false,
+2023-05-01T22:00:24.9267968Z         properties: {
+2023-05-01T22:00:24.9268188Z           dry: {
+2023-05-01T22:00:24.9268645Z             description: 'Log the assets that should be removed instead of deleting them.',
+2023-05-01T22:00:24.9269012Z             type: 'boolean'
+2023-05-01T22:00:24.9269242Z           },
+2023-05-01T22:00:24.9269627Z           keep: { description: 'Keep these assets.', anyOf: [Array] }
+2023-05-01T22:00:24.9269903Z         }
+2023-05-01T22:00:24.9270102Z       },
+2023-05-01T22:00:24.9270328Z       CompareBeforeEmit: {
+2023-05-01T22:00:24.9270913Z         description: 'Check if to be emitted file already exists and have the same content before writing to output filesystem.',
+2023-05-01T22:00:24.9271315Z         type: 'boolean'
+2023-05-01T22:00:24.9271527Z       },
+2023-05-01T22:00:24.9271728Z       Context: {
+2023-05-01T22:00:24.9272420Z         description: 'The base directory (absolute path!) for resolving the `entry` option. If `output.pathinfo` is set, the included pathinfo is shortened to this directory.',
+2023-05-01T22:00:24.9272874Z         type: 'string',
+2023-05-01T22:00:24.9273115Z         absolutePath: true
+2023-05-01T22:00:24.9273345Z       },
+2023-05-01T22:00:24.9273560Z       CrossOriginLoading: {
+2023-05-01T22:00:24.9274005Z         description: 'This option enables cross-origin loading of chunks.',
+2023-05-01T22:00:24.9274454Z         enum: [ false, 'anonymous', 'use-credentials' ]
+2023-05-01T22:00:24.9274711Z       },
+2023-05-01T22:00:24.9274935Z       CssChunkFilename: {
+2023-05-01T22:00:24.9275948Z         description: "Specifies the filename template of non-initial output css files on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9276665Z         oneOf: [ { '$ref': '#/definitions/FilenameTemplate' } ]
+2023-05-01T22:00:24.9276935Z       },
+2023-05-01T22:00:24.9277169Z       CssExperimentOptions: {
+2023-05-01T22:00:24.9277549Z         description: 'Options for css handling.',
+2023-05-01T22:00:24.9277850Z         type: 'object',
+2023-05-01T22:00:24.9278143Z         additionalProperties: false,
+2023-05-01T22:00:24.9278392Z         properties: {
+2023-05-01T22:00:24.9278624Z           exportsOnly: {
+2023-05-01T22:00:24.9279199Z             description: 'Avoid generating and loading a stylesheet and only embed exports from css into output javascript files.',
+2023-05-01T22:00:24.9279607Z             type: 'boolean'
+2023-05-01T22:00:24.9279826Z           }
+2023-05-01T22:00:24.9280014Z         }
+2023-05-01T22:00:24.9280211Z       },
+2023-05-01T22:00:24.9280425Z       CssFilename: {
+2023-05-01T22:00:24.9281393Z         description: "Specifies the filename template of output css files on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9282100Z         oneOf: [ { '$ref': '#/definitions/FilenameTemplate' } ]
+2023-05-01T22:00:24.9282369Z       },
+2023-05-01T22:00:24.9282707Z       CssGeneratorOptions: {
+2023-05-01T22:00:24.9283365Z         description: 'Generator options for css modules.',
+2023-05-01T22:00:24.9283689Z         type: 'object',
+2023-05-01T22:00:24.9283972Z         additionalProperties: false,
+2023-05-01T22:00:24.9284236Z         properties: {}
+2023-05-01T22:00:24.9284459Z       },
+2023-05-01T22:00:24.9284673Z       CssParserOptions: {
+2023-05-01T22:00:24.9285059Z         description: 'Parser options for css modules.',
+2023-05-01T22:00:24.9285372Z         type: 'object',
+2023-05-01T22:00:24.9285655Z         additionalProperties: false,
+2023-05-01T22:00:24.9286054Z         properties: {}
+2023-05-01T22:00:24.9286259Z       },
+2023-05-01T22:00:24.9286474Z       Dependencies: {
+2023-05-01T22:00:24.9286971Z         description: 'References to other configurations to depend on.',
+2023-05-01T22:00:24.9287396Z         type: 'array',
+2023-05-01T22:00:24.9287701Z         items: {
+2023-05-01T22:00:24.9288234Z           description: 'References to another configuration to depend on.',
+2023-05-01T22:00:24.9288789Z           type: 'string'
+2023-05-01T22:00:24.9289038Z         }
+2023-05-01T22:00:24.9289310Z       },
+2023-05-01T22:00:24.9289603Z       DevServer: {
+2023-05-01T22:00:24.9290075Z         description: 'Options for the webpack-dev-server.',
+2023-05-01T22:00:24.9290512Z         type: 'object'
+2023-05-01T22:00:24.9290797Z       },
+2023-05-01T22:00:24.9291036Z       DevTool: {
+2023-05-01T22:00:24.9291713Z         description: 'A developer tool to enhance debugging (false | eval | [inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map).',
+2023-05-01T22:00:24.9292194Z         anyOf: [
+2023-05-01T22:00:24.9292497Z           { enum: [Array] },
+2023-05-01T22:00:24.9292799Z           {
+2023-05-01T22:00:24.9293084Z             type: 'string',
+2023-05-01T22:00:24.9293700Z             pattern: '^(inline-|hidden-|eval-)?(nosources-)?(cheap-(module-)?)?source-map$'
+2023-05-01T22:00:24.9294118Z           }
+2023-05-01T22:00:24.9294418Z         ]
+2023-05-01T22:00:24.9294690Z       },
+2023-05-01T22:00:24.9295085Z       DevtoolFallbackModuleFilenameTemplate: {
+2023-05-01T22:00:24.9295816Z         description: 'Similar to `output.devtoolModuleFilenameTemplate`, but used in the case of duplicate module identifiers.',
+2023-05-01T22:00:24.9296275Z         anyOf: [
+2023-05-01T22:00:24.9296645Z           { type: 'string' },
+2023-05-01T22:00:24.9297106Z           { instanceof: 'Function', tsType: 'Function' }
+2023-05-01T22:00:24.9297471Z         ]
+2023-05-01T22:00:24.9297703Z       },
+2023-05-01T22:00:24.9298069Z       DevtoolModuleFilenameTemplate: {
+2023-05-01T22:00:24.9298712Z         description: 'Filename template string of function for the sources array in a generated SourceMap.',
+2023-05-01T22:00:24.9299124Z         anyOf: [
+2023-05-01T22:00:24.9299533Z           { type: 'string' },
+2023-05-01T22:00:24.9300004Z           { instanceof: 'Function', tsType: 'Function' }
+2023-05-01T22:00:24.9300288Z         ]
+2023-05-01T22:00:24.9300590Z       },
+2023-05-01T22:00:24.9300929Z       DevtoolNamespace: {
+2023-05-01T22:00:24.9302020Z         description: "Module namespace to use when interpolating filename template string for the sources array in a generated SourceMap. Defaults to `output.library` if not set. It's useful for avoiding runtime collisions in sourcemaps from multiple webpack projects built as libraries.",
+2023-05-01T22:00:24.9302700Z         type: 'string'
+2023-05-01T22:00:24.9302988Z       },
+2023-05-01T22:00:24.9303270Z       EmptyGeneratorOptions: {
+2023-05-01T22:00:24.9303867Z         description: 'No generator options are supported for this module type.',
+2023-05-01T22:00:24.9304305Z         type: 'object',
+2023-05-01T22:00:24.9304671Z         additionalProperties: false
+2023-05-01T22:00:24.9304992Z       },
+2023-05-01T22:00:24.9305345Z       EmptyParserOptions: {
+2023-05-01T22:00:24.9305831Z         description: 'No parser options are supported for this module type.',
+2023-05-01T22:00:24.9306252Z         type: 'object',
+2023-05-01T22:00:24.9306605Z         additionalProperties: false
+2023-05-01T22:00:24.9307144Z       },
+2023-05-01T22:00:24.9307498Z       EnabledChunkLoadingTypes: {
+2023-05-01T22:00:24.9308018Z         description: 'List of chunk loading types enabled for use by entry points.',
+2023-05-01T22:00:24.9308470Z         type: 'array',
+2023-05-01T22:00:24.9308952Z         items: { '$ref': '#/definitions/ChunkLoadingType' }
+2023-05-01T22:00:24.9309339Z       },
+2023-05-01T22:00:24.9309650Z       EnabledLibraryTypes: {
+2023-05-01T22:00:24.9310188Z         description: 'List of library types enabled for use by entry points.',
+2023-05-01T22:00:24.9310691Z         type: 'array',
+2023-05-01T22:00:24.9311167Z         items: { '$ref': '#/definitions/LibraryType' }
+2023-05-01T22:00:24.9352372Z       },
+2023-05-01T22:00:24.9352711Z       EnabledWasmLoadingTypes: {
+2023-05-01T22:00:24.9353309Z         description: 'List of wasm loading types enabled for use by entry points.',
+2023-05-01T22:00:24.9353672Z         type: 'array',
+2023-05-01T22:00:24.9354077Z         items: { '$ref': '#/definitions/WasmLoadingType' }
+2023-05-01T22:00:24.9354345Z       },
+2023-05-01T22:00:24.9354556Z       Entry: {
+2023-05-01T22:00:24.9354935Z         description: 'The entry point(s) of the compilation.',
+2023-05-01T22:00:24.9355217Z         anyOf: [
+2023-05-01T22:00:24.9355573Z           { '$ref': '#/definitions/EntryDynamic' },
+2023-05-01T22:00:24.9355969Z           { '$ref': '#/definitions/EntryStatic' }
+2023-05-01T22:00:24.9356224Z         ]
+2023-05-01T22:00:24.9356416Z       },
+2023-05-01T22:00:24.9356645Z       EntryDescription: {
+2023-05-01T22:00:24.9357061Z         description: 'An object with entry point description.',
+2023-05-01T22:00:24.9357402Z         type: 'object',
+2023-05-01T22:00:24.9357692Z         additionalProperties: false,
+2023-05-01T22:00:24.9357962Z         properties: {
+2023-05-01T22:00:24.9358188Z           asyncChunks: {
+2023-05-01T22:00:24.9358660Z             description: 'Enable/disable creating async chunks that are loaded on demand.',
+2023-05-01T22:00:24.9359032Z             type: 'boolean'
+2023-05-01T22:00:24.9359258Z           },
+2023-05-01T22:00:24.9359680Z           baseUri: { description: 'Base uri for this entry.', type: 'string' },
+2023-05-01T22:00:24.9360137Z           chunkLoading: { '$ref': '#/definitions/ChunkLoading' },
+2023-05-01T22:00:24.9360429Z           dependOn: {
+2023-05-01T22:00:24.9361012Z             description: 'The entrypoints that the current entrypoint depend on. They must be loaded when this entrypoint is loaded.',
+2023-05-01T22:00:24.9361387Z             anyOf: [Array]
+2023-05-01T22:00:24.9361615Z           },
+2023-05-01T22:00:24.9361998Z           filename: { '$ref': '#/definitions/EntryFilename' },
+2023-05-01T22:00:24.9362399Z           import: { '$ref': '#/definitions/EntryItem' },
+2023-05-01T22:00:24.9363082Z           layer: { '$ref': '#/definitions/Layer' },
+2023-05-01T22:00:24.9363510Z           library: { '$ref': '#/definitions/LibraryOptions' },
+2023-05-01T22:00:24.9363954Z           publicPath: { '$ref': '#/definitions/PublicPath' },
+2023-05-01T22:00:24.9364396Z           runtime: { '$ref': '#/definitions/EntryRuntime' },
+2023-05-01T22:00:24.9364833Z           wasmLoading: { '$ref': '#/definitions/WasmLoading' }
+2023-05-01T22:00:24.9365087Z         },
+2023-05-01T22:00:24.9365380Z         required: [ 'import' ]
+2023-05-01T22:00:24.9365616Z       },
+2023-05-01T22:00:24.9365895Z       EntryDescriptionNormalized: {
+2023-05-01T22:00:24.9366335Z         description: 'An object with entry point description.',
+2023-05-01T22:00:24.9366669Z         type: 'object',
+2023-05-01T22:00:24.9366942Z         additionalProperties: false,
+2023-05-01T22:00:24.9367222Z         properties: {
+2023-05-01T22:00:24.9367466Z           asyncChunks: {
+2023-05-01T22:00:24.9367927Z             description: 'Enable/disable creating async chunks that are loaded on demand.',
+2023-05-01T22:00:24.9368293Z             type: 'boolean'
+2023-05-01T22:00:24.9368505Z           },
+2023-05-01T22:00:24.9368923Z           baseUri: { description: 'Base uri for this entry.', type: 'string' },
+2023-05-01T22:00:24.9369645Z           chunkLoading: { '$ref': '#/definitions/ChunkLoading' },
+2023-05-01T22:00:24.9369940Z           dependOn: {
+2023-05-01T22:00:24.9370530Z             description: 'The entrypoints that the current entrypoint depend on. They must be loaded when this entrypoint is loaded.',
+2023-05-01T22:00:24.9370938Z             type: 'array',
+2023-05-01T22:00:24.9371158Z             items: [Object],
+2023-05-01T22:00:24.9371402Z             minItems: 1,
+2023-05-01T22:00:24.9371644Z             uniqueItems: true
+2023-05-01T22:00:24.9371874Z           },
+2023-05-01T22:00:24.9372362Z           filename: { '$ref': '#/definitions/Filename' },
+2023-05-01T22:00:24.9372628Z           import: {
+2023-05-01T22:00:24.9373081Z             description: 'Module(s) that are loaded upon startup. The last one is exported.',
+2023-05-01T22:00:24.9373446Z             type: 'array',
+2023-05-01T22:00:24.9373682Z             items: [Object],
+2023-05-01T22:00:24.9373919Z             minItems: 1,
+2023-05-01T22:00:24.9374166Z             uniqueItems: true
+2023-05-01T22:00:24.9374384Z           },
+2023-05-01T22:00:24.9374730Z           layer: { '$ref': '#/definitions/Layer' },
+2023-05-01T22:00:24.9375155Z           library: { '$ref': '#/definitions/LibraryOptions' },
+2023-05-01T22:00:24.9375600Z           publicPath: { '$ref': '#/definitions/PublicPath' },
+2023-05-01T22:00:24.9376033Z           runtime: { '$ref': '#/definitions/EntryRuntime' },
+2023-05-01T22:00:24.9376471Z           wasmLoading: { '$ref': '#/definitions/WasmLoading' }
+2023-05-01T22:00:24.9376727Z         }
+2023-05-01T22:00:24.9376943Z       },
+2023-05-01T22:00:24.9377165Z       EntryDynamic: {
+2023-05-01T22:00:24.9377723Z         description: 'A Function returning an entry object, an entry string, an entry array or a promise to these things.',
+2023-05-01T22:00:24.9378159Z         instanceof: 'Function',
+2023-05-01T22:00:24.9378561Z         tsType: '(() => EntryStatic | Promise<EntryStatic>)'
+2023-05-01T22:00:24.9378817Z       },
+2023-05-01T22:00:24.9379085Z       EntryDynamicNormalized: {
+2023-05-01T22:00:24.9379570Z         description: 'A Function returning a Promise resolving to a normalized entry.',
+2023-05-01T22:00:24.9379968Z         instanceof: 'Function',
+2023-05-01T22:00:24.9380367Z         tsType: '(() => Promise<EntryStaticNormalized>)'
+2023-05-01T22:00:24.9380625Z       },
+2023-05-01T22:00:24.9380850Z       EntryFilename: {
+2023-05-01T22:00:24.9381805Z         description: "Specifies the filename of the output file on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9382512Z         oneOf: [ { '$ref': '#/definitions/FilenameTemplate' } ]
+2023-05-01T22:00:24.9382795Z       },
+2023-05-01T22:00:24.9383010Z       EntryItem: {
+2023-05-01T22:00:24.9383402Z         description: 'Module(s) that are loaded upon startup.',
+2023-05-01T22:00:24.9383671Z         anyOf: [
+2023-05-01T22:00:24.9383895Z           {
+2023-05-01T22:00:24.9384348Z             description: 'All modules are loaded upon startup. The last one is exported.',
+2023-05-01T22:00:24.9384707Z             type: 'array',
+2023-05-01T22:00:24.9384946Z             items: [Object],
+2023-05-01T22:00:24.9385169Z             minItems: 1,
+2023-05-01T22:00:24.9385411Z             uniqueItems: true
+2023-05-01T22:00:24.9385639Z           },
+2023-05-01T22:00:24.9385845Z           {
+2023-05-01T22:00:24.9386303Z             description: 'The string is resolved to a module which is loaded upon startup.',
+2023-05-01T22:00:24.9386666Z             type: 'string',
+2023-05-01T22:00:24.9386890Z             minLength: 1
+2023-05-01T22:00:24.9387111Z           }
+2023-05-01T22:00:24.9387318Z         ]
+2023-05-01T22:00:24.9387523Z       },
+2023-05-01T22:00:24.9387747Z       EntryNormalized: {
+2023-05-01T22:00:24.9388138Z         description: 'The entry point(s) of the compilation.',
+2023-05-01T22:00:24.9388418Z         anyOf: [
+2023-05-01T22:00:24.9388932Z           { '$ref': '#/definitions/EntryDynamicNormalized' },
+2023-05-01T22:00:24.9389394Z           { '$ref': '#/definitions/EntryStaticNormalized' }
+2023-05-01T22:00:24.9389656Z         ]
+2023-05-01T22:00:24.9389840Z       },
+2023-05-01T22:00:24.9390041Z       EntryObject: {
+2023-05-01T22:00:24.9390664Z         description: 'Multiple entry bundles are created. The key is the entry name. The value can be a string, an array or an entry description object.',
+2023-05-01T22:00:24.9391088Z         type: 'object',
+2023-05-01T22:00:24.9391371Z         additionalProperties: {
+2023-05-01T22:00:24.9391890Z           description: 'An entry point with name.',
+2023-05-01T22:00:24.9392189Z           anyOf: [ [Object], [Object] ]
+2023-05-01T22:00:24.9392424Z         }
+2023-05-01T22:00:24.9392629Z       },
+2023-05-01T22:00:24.9392847Z       EntryRuntime: {
+2023-05-01T22:00:24.9393471Z         description: 'The name of the runtime chunk. If set a runtime chunk with this name is created or an existing entrypoint is used as runtime.',
+2023-05-01T22:00:24.9394039Z         anyOf: [ { enum: [Array] }, { type: 'string', minLength: 1 } ]
+2023-05-01T22:00:24.9394299Z       },
+2023-05-01T22:00:24.9394519Z       EntryStatic: {
+2023-05-01T22:00:24.9394891Z         description: 'A static entry description.',
+2023-05-01T22:00:24.9395163Z         anyOf: [
+2023-05-01T22:00:24.9395515Z           { '$ref': '#/definitions/EntryObject' },
+2023-05-01T22:00:24.9395889Z           { '$ref': '#/definitions/EntryUnnamed' }
+2023-05-01T22:00:24.9396144Z         ]
+2023-05-01T22:00:24.9396348Z       },
+2023-05-01T22:00:24.9396613Z       EntryStaticNormalized: {
+2023-05-01T22:00:24.9397206Z         description: 'Multiple entry bundles are created. The key is the entry name. The value is an entry description object.',
+2023-05-01T22:00:24.9397616Z         type: 'object',
+2023-05-01T22:00:24.9397879Z         additionalProperties: {
+2023-05-01T22:00:24.9398316Z           description: 'An object with entry point description.',
+2023-05-01T22:00:24.9398626Z           oneOf: [ [Object] ]
+2023-05-01T22:00:24.9398850Z         }
+2023-05-01T22:00:24.9399052Z       },
+2023-05-01T22:00:24.9399269Z       EntryUnnamed: {
+2023-05-01T22:00:24.9399643Z         description: 'An entry point without name.',
+2023-05-01T22:00:24.9400055Z         oneOf: [ { '$ref': '#/definitions/EntryItem' } ]
+2023-05-01T22:00:24.9400314Z       },
+2023-05-01T22:00:24.9400530Z       Environment: {
+2023-05-01T22:00:24.9401032Z         description: 'The abilities of the environment where the webpack generated code should run.',
+2023-05-01T22:00:24.9401389Z         type: 'object',
+2023-05-01T22:00:24.9401680Z         additionalProperties: false,
+2023-05-01T22:00:24.9401950Z         properties: {
+2023-05-01T22:00:24.9402192Z           arrowFunction: {
+2023-05-01T22:00:24.9402656Z             description: "The environment supports arrow functions ('() => { ... }').",
+2023-05-01T22:00:24.9403185Z             type: 'boolean'
+2023-05-01T22:00:24.9403398Z           },
+2023-05-01T22:00:24.9403638Z           bigIntLiteral: {
+2023-05-01T22:00:24.9404088Z             description: 'The environment supports BigInt as literal (123n).',
+2023-05-01T22:00:24.9404445Z             type: 'boolean'
+2023-05-01T22:00:24.9404672Z           },
+2023-05-01T22:00:24.9404875Z           const: {
+2023-05-01T22:00:24.9405348Z             description: 'The environment supports const and let for variable declarations.',
+2023-05-01T22:00:24.9405714Z             type: 'boolean'
+2023-05-01T22:00:24.9405940Z           },
+2023-05-01T22:00:24.9406165Z           destructuring: {
+2023-05-01T22:00:24.9406614Z             description: "The environment supports destructuring ('{ a, b } = obj').",
+2023-05-01T22:00:24.9406974Z             type: 'boolean'
+2023-05-01T22:00:24.9407197Z           },
+2023-05-01T22:00:24.9407427Z           dynamicImport: {
+2023-05-01T22:00:24.9407962Z             description: 'The environment supports an async import() function to import EcmaScript modules.',
+2023-05-01T22:00:24.9408347Z             type: 'boolean'
+2023-05-01T22:00:24.9408702Z           },
+2023-05-01T22:00:24.9408924Z           forOf: {
+2023-05-01T22:00:24.9409431Z             description: "The environment supports 'for of' iteration ('for (const x of array) { ... }').",
+2023-05-01T22:00:24.9409808Z             type: 'boolean'
+2023-05-01T22:00:24.9410033Z           },
+2023-05-01T22:00:24.9410248Z           module: {
+2023-05-01T22:00:24.9410804Z             description: "The environment supports EcmaScript Module syntax to import EcmaScript modules (import ... from '...').",
+2023-05-01T22:00:24.9411215Z             type: 'boolean'
+2023-05-01T22:00:24.9411618Z           },
+2023-05-01T22:00:24.9411854Z           optionalChaining: {
+2023-05-01T22:00:24.9412350Z             description: "The environment supports optional chaining ('obj?.a' or 'obj?.()').",
+2023-05-01T22:00:24.9412714Z             type: 'boolean'
+2023-05-01T22:00:24.9412927Z           },
+2023-05-01T22:00:24.9413156Z           templateLiteral: {
+2023-05-01T22:00:24.9413596Z             description: 'The environment supports template literals.',
+2023-05-01T22:00:24.9413938Z             type: 'boolean'
+2023-05-01T22:00:24.9414160Z           }
+2023-05-01T22:00:24.9414348Z         }
+2023-05-01T22:00:24.9414547Z       },
+2023-05-01T22:00:24.9414770Z       Experiments: {
+2023-05-01T22:00:24.9415306Z         description: 'Enables/Disables experiments (experimental features with relax SemVer compatibility).',
+2023-05-01T22:00:24.9415694Z         type: 'object',
+2023-05-01T22:00:24.9416083Z         implements: [ '#/definitions/ExperimentsCommon' ],
+2023-05-01T22:00:24.9416412Z         additionalProperties: false,
+2023-05-01T22:00:24.9416678Z         properties: {
+2023-05-01T22:00:24.9416926Z           asyncWebAssembly: {
+2023-05-01T22:00:24.9417429Z             description: 'Support WebAssembly as asynchronous EcmaScript Module.',
+2023-05-01T22:00:24.9417795Z             type: 'boolean'
+2023-05-01T22:00:24.9418010Z           },
+2023-05-01T22:00:24.9418237Z           backCompat: {
+2023-05-01T22:00:24.9418772Z             description: 'Enable backward-compat layer with deprecation warnings for many webpack 4 APIs.',
+2023-05-01T22:00:24.9419165Z             type: 'boolean'
+2023-05-01T22:00:24.9419384Z           },
+2023-05-01T22:00:24.9419603Z           buildHttp: {
+2023-05-01T22:00:24.9420060Z             description: 'Build http(s): urls using a lockfile and resource content cache.',
+2023-05-01T22:00:24.9420374Z             anyOf: [Array]
+2023-05-01T22:00:24.9420591Z           },
+2023-05-01T22:00:24.9420816Z           cacheUnaffected: {
+2023-05-01T22:00:24.9421405Z             description: 'Enable additional in memory caching of modules that are unchanged and reference only unchanged modules.',
+2023-05-01T22:00:24.9421809Z             type: 'boolean'
+2023-05-01T22:00:24.9422014Z           },
+2023-05-01T22:00:24.9422412Z           css: { description: 'Enable css support.', anyOf: [Array] },
+2023-05-01T22:00:24.9422715Z           futureDefaults: {
+2023-05-01T22:00:24.9423128Z             description: 'Apply defaults of next major version.',
+2023-05-01T22:00:24.9423456Z             type: 'boolean'
+2023-05-01T22:00:24.9423663Z           },
+2023-05-01T22:00:24.9424078Z           layers: { description: 'Enable module layers.', type: 'boolean' },
+2023-05-01T22:00:24.9424391Z           lazyCompilation: {
+2023-05-01T22:00:24.9424866Z             description: 'Compile entrypoints and import()s only when they are accessed.',
+2023-05-01T22:00:24.9425189Z             anyOf: [Array]
+2023-05-01T22:00:24.9425405Z           },
+2023-05-01T22:00:24.9425611Z           outputModule: {
+2023-05-01T22:00:24.9426063Z             description: 'Allow output javascript files as module source type.',
+2023-05-01T22:00:24.9426407Z             type: 'boolean'
+2023-05-01T22:00:24.9426631Z           },
+2023-05-01T22:00:24.9426857Z           syncWebAssembly: {
+2023-05-01T22:00:24.9427329Z             description: 'Support WebAssembly as synchronous EcmaScript Module (outdated).',
+2023-05-01T22:00:24.9427690Z             type: 'boolean'
+2023-05-01T22:00:24.9428044Z           },
+2023-05-01T22:00:24.9428277Z           topLevelAwait: {
+2023-05-01T22:00:24.9428745Z             description: 'Allow using top-level-await in EcmaScript Modules.',
+2023-05-01T22:00:24.9429098Z             type: 'boolean'
+2023-05-01T22:00:24.9429306Z           }
+2023-05-01T22:00:24.9429520Z         }
+2023-05-01T22:00:24.9429721Z       },
+2023-05-01T22:00:24.9429949Z       ExperimentsCommon: {
+2023-05-01T22:00:24.9430487Z         description: 'Enables/Disables experiments (experimental features with relax SemVer compatibility).',
+2023-05-01T22:00:24.9430863Z         type: 'object',
+2023-05-01T22:00:24.9431251Z         additionalProperties: false,
+2023-05-01T22:00:24.9431511Z         properties: {
+2023-05-01T22:00:24.9431758Z           asyncWebAssembly: {
+2023-05-01T22:00:24.9432223Z             description: 'Support WebAssembly as asynchronous EcmaScript Module.',
+2023-05-01T22:00:24.9432580Z             type: 'boolean'
+2023-05-01T22:00:24.9432788Z           },
+2023-05-01T22:00:24.9433013Z           backCompat: {
+2023-05-01T22:00:24.9433536Z             description: 'Enable backward-compat layer with deprecation warnings for many webpack 4 APIs.',
+2023-05-01T22:00:24.9433924Z             type: 'boolean'
+2023-05-01T22:00:24.9434143Z           },
+2023-05-01T22:00:24.9434358Z           cacheUnaffected: {
+2023-05-01T22:00:24.9434937Z             description: 'Enable additional in memory caching of modules that are unchanged and reference only unchanged modules.',
+2023-05-01T22:00:24.9435346Z             type: 'boolean'
+2023-05-01T22:00:24.9435564Z           },
+2023-05-01T22:00:24.9435793Z           futureDefaults: {
+2023-05-01T22:00:24.9436195Z             description: 'Apply defaults of next major version.',
+2023-05-01T22:00:24.9436506Z             type: 'boolean'
+2023-05-01T22:00:24.9436724Z           },
+2023-05-01T22:00:24.9437138Z           layers: { description: 'Enable module layers.', type: 'boolean' },
+2023-05-01T22:00:24.9437436Z           outputModule: {
+2023-05-01T22:00:24.9437878Z             description: 'Allow output javascript files as module source type.',
+2023-05-01T22:00:24.9438223Z             type: 'boolean'
+2023-05-01T22:00:24.9438429Z           },
+2023-05-01T22:00:24.9438655Z           syncWebAssembly: {
+2023-05-01T22:00:24.9439140Z             description: 'Support WebAssembly as synchronous EcmaScript Module (outdated).',
+2023-05-01T22:00:24.9439506Z             type: 'boolean'
+2023-05-01T22:00:24.9439723Z           },
+2023-05-01T22:00:24.9439932Z           topLevelAwait: {
+2023-05-01T22:00:24.9440384Z             description: 'Allow using top-level-await in EcmaScript Modules.',
+2023-05-01T22:00:24.9440741Z             type: 'boolean'
+2023-05-01T22:00:24.9440964Z           }
+2023-05-01T22:00:24.9441164Z         }
+2023-05-01T22:00:24.9441359Z       },
+2023-05-01T22:00:24.9441605Z       ExperimentsNormalized: {
+2023-05-01T22:00:24.9442154Z         description: 'Enables/Disables experiments (experimental features with relax SemVer compatibility).',
+2023-05-01T22:00:24.9442548Z         type: 'object',
+2023-05-01T22:00:24.9443061Z         implements: [ '#/definitions/ExperimentsCommon' ],
+2023-05-01T22:00:24.9443402Z         additionalProperties: false,
+2023-05-01T22:00:24.9443653Z         properties: {
+2023-05-01T22:00:24.9443900Z           asyncWebAssembly: {
+2023-05-01T22:00:24.9444369Z             description: 'Support WebAssembly as asynchronous EcmaScript Module.',
+2023-05-01T22:00:24.9444728Z             type: 'boolean'
+2023-05-01T22:00:24.9444950Z           },
+2023-05-01T22:00:24.9445178Z           backCompat: {
+2023-05-01T22:00:24.9445687Z             description: 'Enable backward-compat layer with deprecation warnings for many webpack 4 APIs.',
+2023-05-01T22:00:24.9446080Z             type: 'boolean'
+2023-05-01T22:00:24.9446301Z           },
+2023-05-01T22:00:24.9446517Z           buildHttp: {
+2023-05-01T22:00:24.9446980Z             description: 'Build http(s): urls using a lockfile and resource content cache.',
+2023-05-01T22:00:24.9447294Z             oneOf: [Array]
+2023-05-01T22:00:24.9447647Z           },
+2023-05-01T22:00:24.9447883Z           cacheUnaffected: {
+2023-05-01T22:00:24.9450443Z             description: 'Enable additional in memory caching of modules that are unchanged and reference only unchanged modules.',
+2023-05-01T22:00:24.9450869Z             type: 'boolean'
+2023-05-01T22:00:24.9451093Z           },
+2023-05-01T22:00:24.9451483Z           css: { description: 'Enable css support.', anyOf: [Array] },
+2023-05-01T22:00:24.9451789Z           futureDefaults: {
+2023-05-01T22:00:24.9452198Z             description: 'Apply defaults of next major version.',
+2023-05-01T22:00:24.9452704Z             type: 'boolean'
+2023-05-01T22:00:24.9452925Z           },
+2023-05-01T22:00:24.9453355Z           layers: { description: 'Enable module layers.', type: 'boolean' },
+2023-05-01T22:00:24.9453654Z           lazyCompilation: {
+2023-05-01T22:00:24.9454135Z             description: 'Compile entrypoints and import()s only when they are accessed.',
+2023-05-01T22:00:24.9454462Z             anyOf: [Array]
+2023-05-01T22:00:24.9454680Z           },
+2023-05-01T22:00:24.9454900Z           outputModule: {
+2023-05-01T22:00:24.9455346Z             description: 'Allow output javascript files as module source type.',
+2023-05-01T22:00:24.9455676Z             type: 'boolean'
+2023-05-01T22:00:24.9455899Z           },
+2023-05-01T22:00:24.9456124Z           syncWebAssembly: {
+2023-05-01T22:00:24.9456615Z             description: 'Support WebAssembly as synchronous EcmaScript Module (outdated).',
+2023-05-01T22:00:24.9456975Z             type: 'boolean'
+2023-05-01T22:00:24.9457187Z           },
+2023-05-01T22:00:24.9457407Z           topLevelAwait: {
+2023-05-01T22:00:24.9457853Z             description: 'Allow using top-level-await in EcmaScript Modules.',
+2023-05-01T22:00:24.9458198Z             type: 'boolean'
+2023-05-01T22:00:24.9458417Z           }
+2023-05-01T22:00:24.9458617Z         }
+2023-05-01T22:00:24.9458804Z       },
+2023-05-01T22:00:24.9459017Z       ExternalItem: {
+2023-05-01T22:00:24.9459795Z         description: "Specify dependency that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.",
+2023-05-01T22:00:24.9460238Z         anyOf: [
+2023-05-01T22:00:24.9460445Z           {
+2023-05-01T22:00:24.9460834Z             description: 'Every matched dependency becomes external.',
+2023-05-01T22:00:24.9461209Z             instanceof: 'RegExp',
+2023-05-01T22:00:24.9461495Z             tsType: 'RegExp'
+2023-05-01T22:00:24.9461716Z           },
+2023-05-01T22:00:24.9461916Z           {
+2023-05-01T22:00:24.9462457Z             description: 'An exact matched dependency becomes external. The same string is used as external dependency.',
+2023-05-01T22:00:24.9462833Z             type: 'string'
+2023-05-01T22:00:24.9463054Z           },
+2023-05-01T22:00:24.9463258Z           {
+2023-05-01T22:00:24.9463818Z             description: 'If an dependency matches exactly a property of the object, the property value is used as dependency.',
+2023-05-01T22:00:24.9464227Z             type: 'object',
+2023-05-01T22:00:24.9464527Z             additionalProperties: [Object],
+2023-05-01T22:00:24.9466383Z             properties: [Object]
+2023-05-01T22:00:24.9466651Z           },
+2023-05-01T22:00:24.9466862Z           {
+2023-05-01T22:00:24.9467456Z             description: 'The function is called on each dependency (`function(context, request, callback(err, result))`).',
+2023-05-01T22:00:24.9467896Z             instanceof: 'Function',
+2023-05-01T22:00:24.9468668Z             tsType: '(((data: ExternalItemFunctionData, callback: (err?: Error, result?: ExternalItemValue) => void) => void) | ((data: ExternalItemFunctionData) => Promise<ExternalItemValue>))'
+2023-05-01T22:00:24.9469114Z           }
+2023-05-01T22:00:24.9469315Z         ]
+2023-05-01T22:00:24.9469511Z       },
+2023-05-01T22:00:24.9469773Z       ExternalItemFunctionData: {
+2023-05-01T22:00:24.9470467Z         description: "Data object passed as argument when a function is set for 'externals'.",
+2023-05-01T22:00:24.9470829Z         type: 'object',
+2023-05-01T22:00:24.9471116Z         additionalProperties: false,
+2023-05-01T22:00:24.9471378Z         properties: {
+2023-05-01T22:00:24.9471607Z           context: {
+2023-05-01T22:00:24.9472026Z             description: 'The directory in which the request is placed.',
+2023-05-01T22:00:24.9472373Z             type: 'string'
+2023-05-01T22:00:24.9472584Z           },
+2023-05-01T22:00:24.9472805Z           contextInfo: {
+2023-05-01T22:00:24.9473179Z             description: 'Contextual information.',
+2023-05-01T22:00:24.9473608Z             type: 'object',
+2023-05-01T22:00:24.9474098Z             tsType: "import('../lib/ModuleFactory').ModuleFactoryCreateDataContextInfo"
+2023-05-01T22:00:24.9474418Z           },
+2023-05-01T22:00:24.9474647Z           dependencyType: {
+2023-05-01T22:00:24.9475086Z             description: 'The category of the referencing dependencies.',
+2023-05-01T22:00:24.9475424Z             type: 'string'
+2023-05-01T22:00:24.9475653Z           },
+2023-05-01T22:00:24.9475874Z           getResolve: {
+2023-05-01T22:00:24.9476315Z             description: 'Get a resolve function with the current resolver options.',
+2023-05-01T22:00:24.9476708Z             instanceof: 'Function',
+2023-05-01T22:00:24.9477466Z             tsType: '((options?: ResolveOptions) => ((context: string, request: string, callback: (err?: Error, result?: string) => void) => void) | ((context: string, request: string) => Promise<string>))'
+2023-05-01T22:00:24.9477877Z           },
+2023-05-01T22:00:24.9478087Z           request: {
+2023-05-01T22:00:24.9478600Z             description: 'The request as written by the user in the require/import expression/statement.',
+2023-05-01T22:00:24.9478961Z             type: 'string'
+2023-05-01T22:00:24.9479176Z           }
+2023-05-01T22:00:24.9479376Z         }
+2023-05-01T22:00:24.9479573Z       },
+2023-05-01T22:00:24.9479796Z       ExternalItemValue: {
+2023-05-01T22:00:24.9480204Z         description: 'The dependency used for the external.',
+2023-05-01T22:00:24.9480469Z         anyOf: [
+2023-05-01T22:00:24.9480799Z           { type: 'array', items: [Object] },
+2023-05-01T22:00:24.9481037Z           {
+2023-05-01T22:00:24.9481482Z             description: '`true`: The dependency name is used as target of the external.',
+2023-05-01T22:00:24.9481833Z             type: 'boolean'
+2023-05-01T22:00:24.9482041Z           },
+2023-05-01T22:00:24.9482246Z           {
+2023-05-01T22:00:24.9482602Z             description: 'The target of the external.',
+2023-05-01T22:00:24.9483095Z             type: 'string'
+2023-05-01T22:00:24.9483328Z           },
+2023-05-01T22:00:24.9483577Z           { type: 'object' }
+2023-05-01T22:00:24.9483803Z         ]
+2023-05-01T22:00:24.9484003Z       },
+2023-05-01T22:00:24.9485732Z       Externals: {
+2023-05-01T22:00:24.9486577Z         description: "Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.",
+2023-05-01T22:00:24.9487035Z         anyOf: [
+2023-05-01T22:00:24.9487357Z           { type: 'array', items: [Object] },
+2023-05-01T22:00:24.9487735Z           { '$ref': '#/definitions/ExternalItem' }
+2023-05-01T22:00:24.9487987Z         ]
+2023-05-01T22:00:24.9488188Z       },
+2023-05-01T22:00:24.9488414Z       ExternalsPresets: {
+2023-05-01T22:00:24.9488850Z         description: 'Enable presets of externals for specific targets.',
+2023-05-01T22:00:24.9489181Z         type: 'object',
+2023-05-01T22:00:24.9489464Z         additionalProperties: false,
+2023-05-01T22:00:24.9489738Z         properties: {
+2023-05-01T22:00:24.9489969Z           electron: {
+2023-05-01T22:00:24.9490645Z             description: "Treat common electron built-in modules in main and preload context like 'electron', 'ipc' or 'shell' as external and load them via require() when used.",
+2023-05-01T22:00:24.9491101Z             type: 'boolean'
+2023-05-01T22:00:24.9491308Z           },
+2023-05-01T22:00:24.9491528Z           electronMain: {
+2023-05-01T22:00:24.9492373Z             description: "Treat electron built-in modules in the main context like 'app', 'ipc-main' or 'shell' as external and load them via require() when used.",
+2023-05-01T22:00:24.9492823Z             type: 'boolean'
+2023-05-01T22:00:24.9493046Z           },
+2023-05-01T22:00:24.9493262Z           electronPreload: {
+2023-05-01T22:00:24.9493974Z             description: "Treat electron built-in modules in the preload context like 'web-frame', 'ipc-renderer' or 'shell' as external and load them via require() when used.",
+2023-05-01T22:00:24.9494572Z             type: 'boolean'
+2023-05-01T22:00:24.9494795Z           },
+2023-05-01T22:00:24.9495025Z           electronRenderer: {
+2023-05-01T22:00:24.9495727Z             description: "Treat electron built-in modules in the renderer context like 'web-frame', 'ipc-renderer' or 'shell' as external and load them via require() when used.",
+2023-05-01T22:00:24.9496195Z             type: 'boolean'
+2023-05-01T22:00:24.9496399Z           },
+2023-05-01T22:00:24.9496620Z           node: {
+2023-05-01T22:00:24.9497177Z             description: 'Treat node.js built-in modules like fs, path or vm as external and load them via require() when used.',
+2023-05-01T22:00:24.9497579Z             type: 'boolean'
+2023-05-01T22:00:24.9497798Z           },
+2023-05-01T22:00:24.9497992Z           nwjs: {
+2023-05-01T22:00:24.9498492Z             description: 'Treat NW.js legacy nw.gui module as external and load it via require() when used.',
+2023-05-01T22:00:24.9498864Z             type: 'boolean'
+2023-05-01T22:00:24.9499079Z           },
+2023-05-01T22:00:24.9499285Z           web: {
+2023-05-01T22:00:24.9500087Z             description: "Treat references to 'http(s)://...' and 'std:...' as external and load them via import when used (Note that this changes execution order as externals are executed before any other code in the chunk).",
+2023-05-01T22:00:24.9500610Z             type: 'boolean'
+2023-05-01T22:00:24.9500815Z           },
+2023-05-01T22:00:24.9501038Z           webAsync: {
+2023-05-01T22:00:24.9501826Z             description: "Treat references to 'http(s)://...' and 'std:...' as external and load them via async import() when used (Note that this external type is an async module, which has various effects on the execution).",
+2023-05-01T22:00:24.9502328Z             type: 'boolean'
+2023-05-01T22:00:24.9502547Z           }
+2023-05-01T22:00:24.9502736Z         }
+2023-05-01T22:00:24.9502929Z       },
+2023-05-01T22:00:24.9503140Z       ExternalsType: {
+2023-05-01T22:00:24.9503793Z         description: "Specifies the default type of externals ('amd*', 'umd*', 'system' and 'jsonp' depend on output.libraryTarget set to the same value).",
+2023-05-01T22:00:24.9503887Z         enum: [
+2023-05-01T22:00:24.9504066Z           'var',             'module',
+2023-05-01T22:00:24.9504240Z           'assign',          'this',
+2023-05-01T22:00:24.9504406Z           'window',          'self',
+2023-05-01T22:00:24.9504588Z           'global',          'commonjs',
+2023-05-01T22:00:24.9504825Z           'commonjs2',       'commonjs-module',
+2023-05-01T22:00:24.9504995Z           'commonjs-static', 'amd',
+2023-05-01T22:00:24.9505168Z           'amd-require',     'umd',
+2023-05-01T22:00:24.9505338Z           'umd2',            'jsonp',
+2023-05-01T22:00:24.9505519Z           'system',          'promise',
+2023-05-01T22:00:24.9505697Z           'import',          'script',
+2023-05-01T22:00:24.9505835Z           'node-commonjs'
+2023-05-01T22:00:24.9505921Z         ]
+2023-05-01T22:00:24.9506008Z       },
+2023-05-01T22:00:24.9506118Z       FileCacheOptions: {
+2023-05-01T22:00:24.9506421Z         description: 'Options object for persistent file-based caching.',
+2023-05-01T22:00:24.9506554Z         type: 'object',
+2023-05-01T22:00:24.9506703Z         additionalProperties: false,
+2023-05-01T22:00:24.9506803Z         properties: {
+2023-05-01T22:00:24.9506947Z           allowCollectingMemory: {
+2023-05-01T22:00:24.9507592Z             description: 'Allows to collect unused memory allocated during deserialization. This requires copying data into smaller buffers and has a performance cost.',
+2023-05-01T22:00:24.9507727Z             type: 'boolean'
+2023-05-01T22:00:24.9507812Z           },
+2023-05-01T22:00:24.9507944Z           buildDependencies: {
+2023-05-01T22:00:24.9508379Z             description: "Dependencies the build depends on (in multiple categories, default categories: 'defaultWebpack').",
+2023-05-01T22:00:24.9508518Z             type: 'object',
+2023-05-01T22:00:24.9508679Z             additionalProperties: [Object]
+2023-05-01T22:00:24.9508765Z           },
+2023-05-01T22:00:24.9508967Z           cacheDirectory: {
+2023-05-01T22:00:24.9509326Z             description: 'Base directory for the cache (defaults to node_modules/.cache/webpack).',
+2023-05-01T22:00:24.9509464Z             type: 'string',
+2023-05-01T22:00:24.9509591Z             absolutePath: true
+2023-05-01T22:00:24.9509675Z           },
+2023-05-01T22:00:24.9509782Z           cacheLocation: {
+2023-05-01T22:00:24.9510116Z             description: 'Locations for the cache (defaults to cacheDirectory / name).',
+2023-05-01T22:00:24.9510253Z             type: 'string',
+2023-05-01T22:00:24.9510369Z             absolutePath: true
+2023-05-01T22:00:24.9510453Z           },
+2023-05-01T22:00:24.9510558Z           compression: {
+2023-05-01T22:00:24.9510845Z             description: 'Compression type used for the cache files.',
+2023-05-01T22:00:24.9510948Z             enum: [Array]
+2023-05-01T22:00:24.9511034Z           },
+2023-05-01T22:00:24.9511137Z           hashAlgorithm: {
+2023-05-01T22:00:24.9511496Z             description: 'Algorithm used for generation the hash (see node.js crypto package).',
+2023-05-01T22:00:24.9511636Z             type: 'string'
+2023-05-01T22:00:24.9511720Z           },
+2023-05-01T22:00:24.9511819Z           idleTimeout: {
+2023-05-01T22:00:24.9512161Z             description: 'Time in ms after which idle period the cache storing should happen.',
+2023-05-01T22:00:24.9512298Z             type: 'number',
+2023-05-01T22:00:24.9512396Z             minimum: 0
+2023-05-01T22:00:24.9512469Z           },
+2023-05-01T22:00:24.9512640Z           idleTimeoutAfterLargeChanges: {
+2023-05-01T22:00:24.9513208Z             description: 'Time in ms after which idle period the cache storing should happen when larger changes has been detected (cumulative build time > 2 x avg cache store time).',
+2023-05-01T22:00:24.9513347Z             type: 'number',
+2023-05-01T22:00:24.9513442Z             minimum: 0
+2023-05-01T22:00:24.9513526Z           },
+2023-05-01T22:00:24.9513690Z           idleTimeoutForInitialStore: {
+2023-05-01T22:00:24.9514061Z             description: 'Time in ms after which idle period the initial cache storing should happen.',
+2023-05-01T22:00:24.9514197Z             type: 'number',
+2023-05-01T22:00:24.9514291Z             minimum: 0
+2023-05-01T22:00:24.9514377Z           },
+2023-05-01T22:00:24.9514483Z           immutablePaths: {
+2023-05-01T22:00:24.9514971Z             description: 'List of paths that are managed by a package manager and contain a version or hash in its path so all files are immutable.',
+2023-05-01T22:00:24.9515113Z             type: 'array',
+2023-05-01T22:00:24.9515209Z             items: [Object]
+2023-05-01T22:00:24.9515292Z           },
+2023-05-01T22:00:24.9515383Z           managedPaths: {
+2023-05-01T22:00:24.9515817Z             description: 'List of paths that are managed by a package manager and can be trusted to not be modified otherwise.',
+2023-05-01T22:00:24.9515953Z             type: 'array',
+2023-05-01T22:00:24.9516052Z             items: [Object]
+2023-05-01T22:00:24.9516138Z           },
+2023-05-01T22:00:24.9516235Z           maxAge: {
+2023-05-01T22:00:24.9516643Z             description: 'Time for which unused cache entries stay in the filesystem cache at minimum (in milliseconds).',
+2023-05-01T22:00:24.9516782Z             type: 'number',
+2023-05-01T22:00:24.9516878Z             minimum: 0
+2023-05-01T22:00:24.9516965Z           },
+2023-05-01T22:00:24.9517105Z           maxMemoryGenerations: {
+2023-05-01T22:00:24.9518099Z             description: 'Number of generations unused cache entries stay in memory cache at minimum (0 = no memory cache used, 1 = may be removed after unused for a single compilation, ..., Infinity: kept forever). Cache entries will be deserialized from disk when removed from memory cache.',
+2023-05-01T22:00:24.9518248Z             type: 'number',
+2023-05-01T22:00:24.9518341Z             minimum: 0
+2023-05-01T22:00:24.9518428Z           },
+2023-05-01T22:00:24.9518571Z           memoryCacheUnaffected: {
+2023-05-01T22:00:24.9519022Z             description: 'Additionally cache computation of modules that are unchanged and reference only unchanged modules in memory.',
+2023-05-01T22:00:24.9519261Z             type: 'boolean'
+2023-05-01T22:00:24.9519347Z           },
+2023-05-01T22:00:24.9519489Z           name: {
+2023-05-01T22:00:24.9519859Z             description: 'Name for the cache. Different names will lead to different coexisting caches.',
+2023-05-01T22:00:24.9519997Z             type: 'string'
+2023-05-01T22:00:24.9520094Z           },
+2023-05-01T22:00:24.9520191Z           profile: {
+2023-05-01T22:00:24.9520545Z             description: 'Track and log detailed timing information for individual cache items.',
+2023-05-01T22:00:24.9520682Z             type: 'boolean'
+2023-05-01T22:00:24.9520768Z           },
+2023-05-01T22:00:24.9520858Z           store: {
+2023-05-01T22:00:24.9521270Z             description: 'When to store data to the filesystem. (pack: Store data when compiler is idle in a single file).',
+2023-05-01T22:00:24.9521369Z             enum: [Array]
+2023-05-01T22:00:24.9521462Z           },
+2023-05-01T22:00:24.9521731Z           type: { description: 'Filesystem caching.', enum: [Array] },
+2023-05-01T22:00:24.9521826Z           version: {
+2023-05-01T22:00:24.9522578Z             description: "Version of the cache data. Different versions won't allow to reuse the cache and override existing content. Update the version when config changed in a way which doesn't allow to reuse cache. This will invalidate the cache.",
+2023-05-01T22:00:24.9522717Z             type: 'string'
+2023-05-01T22:00:24.9522960Z           }
+2023-05-01T22:00:24.9523049Z         },
+2023-05-01T22:00:24.9523200Z         required: [ 'type' ]
+2023-05-01T22:00:24.9523285Z       },
+2023-05-01T22:00:24.9523381Z       Filename: {
+2023-05-01T22:00:24.9524202Z         description: "Specifies the filename of output files on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9524478Z         oneOf: [ { '$ref': '#/definitions/FilenameTemplate' } ]
+2023-05-01T22:00:24.9524563Z       },
+2023-05-01T22:00:24.9524671Z       FilenameTemplate: {
+2023-05-01T22:00:24.9525508Z         description: "Specifies the filename template of output files on disk. You must **not** specify an absolute path here, but the path may contain folders separated by '/'! The specified path is joined with the value of the 'output.path' option to determine the location on disk.",
+2023-05-01T22:00:24.9525601Z         anyOf: [
+2023-05-01T22:00:24.9525870Z           { type: 'string', absolutePath: false, minLength: 1 },
+2023-05-01T22:00:24.9525956Z           {
+2023-05-01T22:00:24.9526134Z             instanceof: 'Function',
+2023-05-01T22:00:24.9526577Z             tsType: '((pathData: import("../lib/Compilation").PathData, assetInfo?: import("../lib/Compilation").AssetInfo) => string)'
+2023-05-01T22:00:24.9526649Z           }
+2023-05-01T22:00:24.9526733Z         ]
+2023-05-01T22:00:24.9526829Z       },
+2023-05-01T22:00:24.9526939Z       FilterItemTypes: {
+2023-05-01T22:00:24.9527199Z         description: 'Filtering value, regexp or function.',
+2023-05-01T22:00:24.9527327Z         cli: { helper: true },
+2023-05-01T22:00:24.9527415Z         anyOf: [
+2023-05-01T22:00:24.9527648Z           { instanceof: 'RegExp', tsType: 'RegExp' },
+2023-05-01T22:00:24.9527991Z           { type: 'string', absolutePath: false },
+2023-05-01T22:00:24.9528083Z           {
+2023-05-01T22:00:24.9528269Z             instanceof: 'Function',
+2023-05-01T22:00:24.9528487Z             tsType: '((value: string) => boolean)'
+2023-05-01T22:00:24.9528584Z           }
+2023-05-01T22:00:24.9528656Z         ]
+2023-05-01T22:00:24.9528740Z       },
+2023-05-01T22:00:24.9528842Z       FilterTypes: {
+2023-05-01T22:00:24.9529048Z         description: 'Filtering values.',
+2023-05-01T22:00:24.9529175Z         cli: { helper: true },
+2023-05-01T22:00:24.9529267Z         anyOf: [
+2023-05-01T22:00:24.9529474Z           { type: 'array', items: [Object] },
+2023-05-01T22:00:24.9529842Z           { '$ref': '#/definitions/FilterItemTypes' }
+2023-05-01T22:00:24.9529927Z         ]
+2023-05-01T22:00:24.9530010Z       },
+2023-05-01T22:00:24.9530172Z       GeneratorOptionsByModuleType: {
+2023-05-01T22:00:24.9530428Z         description: 'Specify options for each generator.',
+2023-05-01T22:00:24.9530560Z         type: 'object',
+2023-05-01T22:00:24.9530707Z         additionalProperties: {
+2023-05-01T22:00:24.9530922Z           description: 'Options for generating.',
+2023-05-01T22:00:24.9531056Z           type: 'object',
+2023-05-01T22:00:24.9531203Z           additionalProperties: true
+2023-05-01T22:00:24.9531289Z         },
+2023-05-01T22:00:24.9531390Z         properties: {
+2023-05-01T22:00:24.9531673Z           asset: { '$ref': '#/definitions/AssetGeneratorOptions' },
+2023-05-01T22:00:24.9531998Z           'asset/inline': { '$ref': '#/definitions/AssetInlineGeneratorOptions' },
+2023-05-01T22:00:24.9532334Z           'asset/resource': { '$ref': '#/definitions/AssetResourceGeneratorOptions' },
+2023-05-01T22:00:24.9532634Z           javascript: { '$ref': '#/definitions/EmptyGeneratorOptions' },
+2023-05-01T22:00:24.9532942Z           'javascript/auto': { '$ref': '#/definitions/EmptyGeneratorOptions' },
+2023-05-01T22:00:24.9533256Z           'javascript/dynamic': { '$ref': '#/definitions/EmptyGeneratorOptions' },
+2023-05-01T22:00:24.9533565Z           'javascript/esm': { '$ref': '#/definitions/EmptyGeneratorOptions' }
+2023-05-01T22:00:24.9533649Z         }
+2023-05-01T22:00:24.9533729Z       },
+2023-05-01T22:00:24.9533828Z       GlobalObject: {
+2023-05-01T22:00:24.9534196Z         description: 'An expression which is used to address the global object/scope in runtime code.',
+2023-05-01T22:00:24.9534321Z         type: 'string',
+2023-05-01T22:00:24.9534417Z         minLength: 1
+2023-05-01T22:00:24.9534500Z       },
+2023-05-01T22:00:24.9534820Z       HashDigest: { description: 'Digest type used for the hash.', type: 'string' },
+2023-05-01T22:00:24.9534935Z       HashDigestLength: {
+2023-05-01T22:00:24.9535211Z         description: 'Number of chars which are used for the hash.',
+2023-05-01T22:00:24.9535342Z         type: 'number',
+2023-05-01T22:00:24.9535435Z         minimum: 1
+2023-05-01T22:00:24.9535517Z       },
+2023-05-01T22:00:24.9535618Z       HashFunction: {
+2023-05-01T22:00:24.9535956Z         description: 'Algorithm used for generation the hash (see node.js crypto package).',
+2023-05-01T22:00:24.9536049Z         anyOf: [
+2023-05-01T22:00:24.9536250Z           { type: 'string', minLength: 1 },
+2023-05-01T22:00:24.9536337Z           {
+2023-05-01T22:00:24.9536504Z             instanceof: 'Function',
+2023-05-01T22:00:24.9536735Z             tsType: "typeof import('../lib/util/Hash')"
+2023-05-01T22:00:24.9536821Z           }
+2023-05-01T22:00:24.9536907Z         ]
+2023-05-01T22:00:24.9536990Z       },
+2023-05-01T22:00:24.9537086Z       HashSalt: {
+2023-05-01T22:00:24.9537379Z         description: 'Any string which is added to the hash to salt it.',
+2023-05-01T22:00:24.9537518Z         type: 'string',
+2023-05-01T22:00:24.9537615Z         minLength: 1
+2023-05-01T22:00:24.9537703Z       },
+2023-05-01T22:00:24.9537833Z       HotUpdateChunkFilename: {
+2023-05-01T22:00:24.9538216Z         description: 'The filename of the Hot Update Chunks. They are inside the output.path directory.',
+2023-05-01T22:00:24.9538349Z         type: 'string',
+2023-05-01T22:00:24.9538458Z         absolutePath: false
+2023-05-01T22:00:24.9538641Z       },
+2023-05-01T22:00:24.9538756Z       HotUpdateGlobal: {
+2023-05-01T22:00:24.9539103Z         description: 'The global variable used by webpack for loading of hot update chunks.',
+2023-05-01T22:00:24.9539234Z         type: 'string'
+2023-05-01T22:00:24.9539318Z       },
+2023-05-01T22:00:24.9539459Z       HotUpdateMainFilename: {
+2023-05-01T22:00:24.9539842Z         description: "The filename of the Hot Update Main File. It is inside the 'output.path' directory.",
+2023-05-01T22:00:24.9539976Z         type: 'string',
+2023-05-01T22:00:24.9540083Z         absolutePath: false
+2023-05-01T22:00:24.9540269Z       },
+2023-05-01T22:00:24.9540370Z       HttpUriAllowedUris: {
+2023-05-01T22:00:24.9540666Z         description: 'List of allowed URIs for building http resources.',
+2023-05-01T22:00:24.9540792Z         cli: { exclude: true },
+2023-05-01T22:00:24.9541091Z         oneOf: [ { '$ref': '#/definitions/HttpUriOptionsAllowedUris' } ]
+2023-05-01T22:00:24.9541178Z       },
+2023-05-01T22:00:24.9541291Z       HttpUriOptions: {
+2023-05-01T22:00:24.9541551Z         description: 'Options for building http resources.',
+2023-05-01T22:00:24.9541684Z         type: 'object',
+2023-05-01T22:00:24.9541835Z         additionalProperties: false,
+2023-05-01T22:00:24.9541935Z         properties: {
+2023-05-01T22:00:24.9542251Z           allowedUris: { '$ref': '#/definitions/HttpUriOptionsAllowedUris' },
+2023-05-01T22:00:24.9542358Z           cacheLocation: {
+2023-05-01T22:00:24.9542847Z             description: "Location where resource content is stored for lockfile entries. It's also possible to disable storing by passing false.",
+2023-05-01T22:00:24.9542953Z             anyOf: [Array]
+2023-05-01T22:00:24.9543038Z           },
+2023-05-01T22:00:24.9543119Z           frozen: {
+2023-05-01T22:00:24.9543584Z             description: 'When set, anything that would lead to a modification of the lockfile or any resource content, will result in an error.',
+2023-05-01T22:00:24.9543723Z             type: 'boolean'
+2023-05-01T22:00:24.9543814Z           },
+2023-05-01T22:00:24.9543928Z           lockfileLocation: {
+2023-05-01T22:00:24.9544161Z             description: 'Location of the lockfile.',
+2023-05-01T22:00:24.9544298Z             type: 'string',
+2023-05-01T22:00:24.9544427Z             absolutePath: true
+2023-05-01T22:00:24.9544512Z           },
+2023-05-01T22:00:24.9544606Z           proxy: {
+2023-05-01T22:00:24.9545017Z             description: 'Proxy configuration, which can be used to specify a proxy server to use for HTTP requests.',
+2023-05-01T22:00:24.9545160Z             type: 'string'
+2023-05-01T22:00:24.9545253Z           },
+2023-05-01T22:00:24.9545348Z           upgrade: {
+2023-05-01T22:00:24.9545850Z             description: 'When set, resources of existing lockfile entries will be fetched and entries will be upgraded when resource content has changed.',
+2023-05-01T22:00:24.9545997Z             type: 'boolean'
+2023-05-01T22:00:24.9546069Z           }
+2023-05-01T22:00:24.9546153Z         },
+2023-05-01T22:00:24.9546346Z         required: [ 'allowedUris' ]
+2023-05-01T22:00:24.9546430Z       },
+2023-05-01T22:00:24.9546589Z       HttpUriOptionsAllowedUris: {
+2023-05-01T22:00:24.9546883Z         description: 'List of allowed URIs (resp. the beginning of them).',
+2023-05-01T22:00:24.9547012Z         type: 'array',
+2023-05-01T22:00:24.9547100Z         items: {
+2023-05-01T22:00:24.9547399Z           description: 'List of allowed URIs (resp. the beginning of them).',
+2023-05-01T22:00:24.9547560Z           anyOf: [ [Object], [Object], [Object] ]
+2023-05-01T22:00:24.9547644Z         }
+2023-05-01T22:00:24.9547733Z       },
+2023-05-01T22:00:24.9547837Z       IgnoreWarnings: {
+2023-05-01T22:00:24.9548049Z         description: 'Ignore specific warnings.',
+2023-05-01T22:00:24.9548180Z         type: 'array',
+2023-05-01T22:00:24.9548267Z         items: {
+2023-05-01T22:00:24.9548495Z           description: 'Ignore specific warnings.',
+2023-05-01T22:00:24.9548653Z           anyOf: [ [Object], [Object], [Object] ]
+2023-05-01T22:00:24.9548834Z         }
+2023-05-01T22:00:24.9548924Z       },
+2023-05-01T22:00:24.9549075Z       IgnoreWarningsNormalized: {
+2023-05-01T22:00:24.9549302Z         description: 'Ignore specific warnings.',
+2023-05-01T22:00:24.9549433Z         type: 'array',
+2023-05-01T22:00:24.9549526Z         items: {
+2023-05-01T22:00:24.9549861Z           description: 'A function to select warnings based on the raw warning instance.',
+2023-05-01T22:00:24.9550037Z           instanceof: 'Function',
+2023-05-01T22:00:24.9550440Z           tsType: "((warning: import('../lib/WebpackError'), compilation: import('../lib/Compilation')) => boolean)"
+2023-05-01T22:00:24.9550626Z         }
+2023-05-01T22:00:24.9550699Z       },
+2023-05-01T22:00:24.9550786Z       Iife: {
+2023-05-01T22:00:24.9551134Z         description: "Wrap javascript code into IIFE's to avoid leaking into global scope.",
+2023-05-01T22:00:24.9551269Z         type: 'boolean'
+2023-05-01T22:00:24.9551356Z       },
+2023-05-01T22:00:24.9551471Z       ImportFunctionName: {
+2023-05-01T22:00:24.9551833Z         description: 'The name of the native import() function (can be exchanged for a polyfill).',
+2023-05-01T22:00:24.9551970Z         type: 'string'
+2023-05-01T22:00:24.9552055Z       },
+2023-05-01T22:00:24.9552161Z       ImportMetaName: {
+2023-05-01T22:00:24.9552528Z         description: 'The name of the native import.meta object (can be exchanged for a polyfill).',
+2023-05-01T22:00:24.9552659Z         type: 'string'
+2023-05-01T22:00:24.9552746Z       },
+2023-05-01T22:00:24.9552885Z       InfrastructureLogging: {
+2023-05-01T22:00:24.9553145Z         description: 'Options for infrastructure level logging.',
+2023-05-01T22:00:24.9553284Z         type: 'object',
+2023-05-01T22:00:24.9553437Z         additionalProperties: false,
+2023-05-01T22:00:24.9553537Z         properties: {
+2023-05-01T22:00:24.9553637Z           appendOnly: {
+2023-05-01T22:00:24.9554202Z             description: 'Only appends lines to the output. Avoids updating existing output e. g. for status messages. This option is only used when no custom console is provided.',
+2023-05-01T22:00:24.9554343Z             type: 'boolean'
+2023-05-01T22:00:24.9554430Z           },
+2023-05-01T22:00:24.9554523Z           colors: {
+2023-05-01T22:00:24.9554934Z             description: 'Enables/Disables colorful output. This option is only used when no custom console is provided.',
+2023-05-01T22:00:24.9555073Z             type: 'boolean'
+2023-05-01T22:00:24.9555159Z           },
+2023-05-01T22:00:24.9555253Z           console: {
+2023-05-01T22:00:24.9555504Z             description: 'Custom console used for logging.',
+2023-05-01T22:00:24.9555650Z             tsType: 'Console'
+2023-05-01T22:00:24.9555723Z           },
+2023-05-01T22:00:24.9555808Z           debug: {
+2023-05-01T22:00:24.9556087Z             description: 'Enable debug logging for specific loggers.',
+2023-05-01T22:00:24.9556187Z             anyOf: [Array]
+2023-05-01T22:00:24.9556272Z           },
+2023-05-01T22:00:24.9556523Z           level: { description: 'Log level.', enum: [Array] },
+2023-05-01T22:00:24.9556618Z           stream: {
+2023-05-01T22:00:24.9557103Z             description: 'Stream used for logging output. Defaults to process.stderr. This option is only used when no custom console is provided.',
+2023-05-01T22:00:24.9557318Z             tsType: 'NodeJS.WritableStream'
+2023-05-01T22:00:24.9557407Z           }
+2023-05-01T22:00:24.9557492Z         }
+2023-05-01T22:00:24.9557576Z       },
+2023-05-01T22:00:24.9557728Z       JavascriptParserOptions: {
+2023-05-01T22:00:24.9557994Z         description: 'Parser options for javascript modules.',
+2023-05-01T22:00:24.9558131Z         type: 'object',
+2023-05-01T22:00:24.9558270Z         additionalProperties: true,
+2023-05-01T22:00:24.9558371Z         properties: {
+2023-05-01T22:00:24.9558585Z           amd: { '$ref': '#/definitions/Amd' },
+2023-05-01T22:00:24.9558685Z           browserify: {
+2023-05-01T22:00:24.9558998Z             description: 'Enable/disable special handling for browserify bundles.',
+2023-05-01T22:00:24.9559235Z             type: 'boolean'
+2023-05-01T22:00:24.9559327Z           },
+2023-05-01T22:00:24.9559420Z           commonjs: {
+2023-05-01T22:00:24.9559706Z             description: 'Enable/disable parsing of CommonJs syntax.',
+2023-05-01T22:00:24.9559843Z             type: 'boolean'
+2023-05-01T22:00:24.9559927Z           },
+2023-05-01T22:00:24.9560077Z           commonjsMagicComments: {
+2023-05-01T22:00:24.9560407Z             description: 'Enable/disable parsing of magic comments in CommonJs syntax.',
+2023-05-01T22:00:24.9560544Z             type: 'boolean'
+2023-05-01T22:00:24.9560615Z           },
+2023-05-01T22:00:24.9560812Z           createRequire: {
+2023-05-01T22:00:24.9561236Z             description: 'Enable/disable parsing "import { createRequire } from "module"" and evaluating createRequire().',
+2023-05-01T22:00:24.9561334Z             anyOf: [Array]
+2023-05-01T22:00:24.9561417Z           },
+2023-05-01T22:00:24.9561550Z           dynamicImportMode: {
+2023-05-01T22:00:24.9561835Z             description: 'Specifies global mode for dynamic import.',
+2023-05-01T22:00:24.9561931Z             enum: [Array]
+2023-05-01T22:00:24.9562015Z           },
+2023-05-01T22:00:24.9562158Z           dynamicImportPrefetch: {
+2023-05-01T22:00:24.9562447Z             description: 'Specifies global prefetch for dynamic import.',
+2023-05-01T22:00:24.9562544Z             anyOf: [Array]
+2023-05-01T22:00:24.9562626Z           },
+2023-05-01T22:00:24.9562768Z           dynamicImportPreload: {
+2023-05-01T22:00:24.9563203Z             description: 'Specifies global preload for dynamic import.',
+2023-05-01T22:00:24.9563297Z             anyOf: [Array]
+2023-05-01T22:00:24.9563383Z           },
+2023-05-01T22:00:24.9563496Z           exportsPresence: {
+2023-05-01T22:00:24.9563915Z             description: 'Specifies the behavior of invalid export names in "import ... from ..." and "export ... from ...".',
+2023-05-01T22:00:24.9564014Z             enum: [Array]
+2023-05-01T22:00:24.9564102Z           },
+2023-05-01T22:00:24.9564257Z           exprContextCritical: {
+2023-05-01T22:00:24.9564556Z             description: 'Enable warnings for full dynamic dependencies.',
+2023-05-01T22:00:24.9564698Z             type: 'boolean'
+2023-05-01T22:00:24.9564786Z           },
+2023-05-01T22:00:24.9564927Z           exprContextRecursive: {
+2023-05-01T22:00:24.9565276Z             description: 'Enable recursive directory lookup for full dynamic dependencies.',
+2023-05-01T22:00:24.9565419Z             type: 'boolean'
+2023-05-01T22:00:24.9565508Z           },
+2023-05-01T22:00:24.9565633Z           exprContextRegExp: {
+2023-05-01T22:00:24.9565986Z             description: 'Sets the default regular expression for full dynamic dependencies.',
+2023-05-01T22:00:24.9566086Z             anyOf: [Array]
+2023-05-01T22:00:24.9566172Z           },
+2023-05-01T22:00:24.9566311Z           exprContextRequest: {
+2023-05-01T22:00:24.9566626Z             description: 'Set the default request for full dynamic dependencies.',
+2023-05-01T22:00:24.9566764Z             type: 'string'
+2023-05-01T22:00:24.9566854Z           },
+2023-05-01T22:00:24.9566949Z           harmony: {
+2023-05-01T22:00:24.9567262Z             description: 'Enable/disable parsing of EcmaScript Modules syntax.',
+2023-05-01T22:00:24.9567400Z             type: 'boolean'
+2023-05-01T22:00:24.9567485Z           },
+2023-05-01T22:00:24.9567578Z           import: {
+2023-05-01T22:00:24.9567857Z             description: 'Enable/disable parsing of import() syntax.',
+2023-05-01T22:00:24.9568000Z             type: 'boolean'
+2023-05-01T22:00:24.9568072Z           },
+2023-05-01T22:00:24.9568222Z           importExportsPresence: {
+2023-05-01T22:00:24.9568587Z             description: 'Specifies the behavior of invalid export names in "import ... from ...".',
+2023-05-01T22:00:24.9568685Z             enum: [Array]
+2023-05-01T22:00:24.9568770Z           },
+2023-05-01T22:00:24.9568876Z           importMeta: {
+2023-05-01T22:00:24.9569150Z             description: 'Enable/disable evaluating import.meta.',
+2023-05-01T22:00:24.9569434Z             type: 'boolean'
+2023-05-01T22:00:24.9569538Z           },
+2023-05-01T22:00:24.9569676Z           importMetaContext: {
+2023-05-01T22:00:24.9570009Z             description: 'Enable/disable evaluating import.meta.webpackContext.',
+2023-05-01T22:00:24.9570148Z             type: 'boolean'
+2023-05-01T22:00:24.9570233Z           },
+2023-05-01T22:00:24.9570450Z           node: { '$ref': '#/definitions/Node' },
+2023-05-01T22:00:24.9570591Z           reexportExportsPresence: {
+2023-05-01T22:00:24.9571314Z             description: 'Specifies the behavior of invalid export names in "export ... from ...". This might be useful to disable during the migration from "export ... from ..." to "export type ... from ..." when reexporting types in TypeScript.',
+2023-05-01T22:00:24.9571536Z             enum: [Array]
+2023-05-01T22:00:24.9571621Z           },
+2023-05-01T22:00:24.9571728Z           requireContext: {
+2023-05-01T22:00:24.9572037Z             description: 'Enable/disable parsing of require.context syntax.',
+2023-05-01T22:00:24.9572179Z             type: 'boolean'
+2023-05-01T22:00:24.9572268Z           },
+2023-05-01T22:00:24.9572375Z           requireEnsure: {
+2023-05-01T22:00:24.9572678Z             description: 'Enable/disable parsing of require.ensure syntax.',
+2023-05-01T22:00:24.9572816Z             type: 'boolean'
+2023-05-01T22:00:24.9572900Z           },
+2023-05-01T22:00:24.9573005Z           requireInclude: {
+2023-05-01T22:00:24.9573310Z             description: 'Enable/disable parsing of require.include syntax.',
+2023-05-01T22:00:24.9573449Z             type: 'boolean'
+2023-05-01T22:00:24.9573538Z           },
+2023-05-01T22:00:24.9573622Z           requireJs: {
+2023-05-01T22:00:24.9574142Z             description: 'Enable/disable parsing of require.js special syntax like require.config, requirejs.config, require.version and requirejs.onError.',
+2023-05-01T22:00:24.9574278Z             type: 'boolean'
+2023-05-01T22:00:24.9574362Z           },
+2023-05-01T22:00:24.9574511Z           strictExportPresence: {
+2023-05-01T22:00:24.9575016Z             description: `Deprecated in favor of "exportsPresence". Emit errors instead of warnings when imported names don't exist in imported module.`,
+2023-05-01T22:00:24.9575150Z             type: 'boolean'
+2023-05-01T22:00:24.9575231Z           },
+2023-05-01T22:00:24.9575391Z           strictThisContextOnImports: {
+2023-05-01T22:00:24.9575766Z             description: 'Handle the this context correctly according to the spec for namespace objects.',
+2023-05-01T22:00:24.9575905Z             type: 'boolean'
+2023-05-01T22:00:24.9575989Z           },
+2023-05-01T22:00:24.9576088Z           system: {
+2023-05-01T22:00:24.9576562Z             description: 'Enable/disable parsing of System.js special syntax like System.import, System.get, System.set and System.register.',
+2023-05-01T22:00:24.9576702Z             type: 'boolean'
+2023-05-01T22:00:24.9576788Z           },
+2023-05-01T22:00:24.9576921Z           unknownContextCritical: {
+2023-05-01T22:00:24.9577320Z             description: 'Enable warnings when using the require function in a not statically analyse-able way.',
+2023-05-01T22:00:24.9577459Z             type: 'boolean'
+2023-05-01T22:00:24.9577547Z           },
+2023-05-01T22:00:24.9577704Z           unknownContextRecursive: {
+2023-05-01T22:00:24.9578144Z             description: 'Enable recursive directory lookup when using the require function in a not statically analyse-able way.',
+2023-05-01T22:00:24.9578281Z             type: 'boolean'
+2023-05-01T22:00:24.9578366Z           },
+2023-05-01T22:00:24.9578511Z           unknownContextRegExp: {
+2023-05-01T22:00:24.9578942Z             description: 'Sets the regular expression when using the require function in a not statically analyse-able way.',
+2023-05-01T22:00:24.9579044Z             anyOf: [Array]
+2023-05-01T22:00:24.9579133Z           },
+2023-05-01T22:00:24.9579277Z           unknownContextRequest: {
+2023-05-01T22:00:24.9579673Z             description: 'Sets the request when using the require function in a not statically analyse-able way.',
+2023-05-01T22:00:24.9579926Z             type: 'string'
+2023-05-01T22:00:24.9580016Z           },
+2023-05-01T22:00:24.9580093Z           url: {
+2023-05-01T22:00:24.9580379Z             description: 'Enable/disable parsing of new URL() syntax.',
+2023-05-01T22:00:24.9580478Z             anyOf: [Array]
+2023-05-01T22:00:24.9580563Z           },
+2023-05-01T22:00:24.9580656Z           worker: {
+2023-05-01T22:00:24.9581120Z             description: 'Disable or configure parsing of WebWorker syntax like new Worker() or navigator.serviceWorker.register().',
+2023-05-01T22:00:24.9581221Z             anyOf: [Array]
+2023-05-01T22:00:24.9581608Z           },
+2023-05-01T22:00:24.9581761Z           wrappedContextCritical: {
+2023-05-01T22:00:24.9582076Z             description: 'Enable warnings for partial dynamic dependencies.',
+2023-05-01T22:00:24.9582215Z             type: 'boolean'
+2023-05-01T22:00:24.9582302Z           },
+2023-05-01T22:00:24.9582455Z           wrappedContextRecursive: {
+2023-05-01T22:00:24.9582822Z             description: 'Enable recursive directory lookup for partial dynamic dependencies.',
+2023-05-01T22:00:24.9582950Z             type: 'boolean'
+2023-05-01T22:00:24.9583040Z           },
+2023-05-01T22:00:24.9583190Z           wrappedContextRegExp: {
+2023-05-01T22:00:24.9583550Z             description: 'Set the inner regular expression for partial dynamic dependencies.',
+2023-05-01T22:00:24.9583727Z             instanceof: 'RegExp',
+2023-05-01T22:00:24.9583872Z             tsType: 'RegExp'
+2023-05-01T22:00:24.9583960Z           }
+2023-05-01T22:00:24.9584045Z         }
+2023-05-01T22:00:24.9584136Z       },
+2023-05-01T22:00:24.9584227Z       Layer: {
+2023-05-01T22:00:24.9584569Z         description: 'Specifies the layer in which modules of this entrypoint are placed.',
+2023-05-01T22:00:24.9584845Z         anyOf: [ { enum: [Array] }, { type: 'string', minLength: 1 } ]
+2023-05-01T22:00:24.9584932Z       },
+2023-05-01T22:00:24.9585128Z       LazyCompilationDefaultBackendOptions: {
+2023-05-01T22:00:24.9585381Z         description: 'Options for the default backend.',
+2023-05-01T22:00:24.9585502Z         type: 'object',
+2023-05-01T22:00:24.9585652Z         additionalProperties: false,
+2023-05-01T22:00:24.9585754Z         properties: {
+2023-05-01T22:00:24.9586033Z           client: { description: 'A custom client.', type: 'string' },
+2023-05-01T22:00:24.9586127Z           listen: {
+2023-05-01T22:00:24.9586414Z             description: 'Specifies where to listen to from the server.',
+2023-05-01T22:00:24.9586515Z             anyOf: [Array]
+2023-05-01T22:00:24.9586601Z           },
+2023-05-01T22:00:24.9586704Z           protocol: {
+2023-05-01T22:00:24.9587058Z             description: 'Specifies the protocol the client should use to connect to the server.',
+2023-05-01T22:00:24.9587156Z             enum: [Array]
+2023-05-01T22:00:24.9587241Z           },
+2023-05-01T22:00:24.9587334Z           server: {
+2023-05-01T22:00:24.9587686Z             description: 'Specifies how to create the server handling the EventSource requests.',
+2023-05-01T22:00:24.9587777Z             anyOf: [Array]
+2023-05-01T22:00:24.9587863Z           }
+2023-05-01T22:00:24.9587948Z         }
+2023-05-01T22:00:24.9588033Z       },
+2023-05-01T22:00:24.9588177Z       LazyCompilationOptions: {
+2023-05-01T22:00:24.9588544Z         description: 'Options for compiling entrypoints and import()s only when they are accessed.',
+2023-05-01T22:00:24.9588678Z         type: 'object',
+2023-05-01T22:00:24.9588829Z         additionalProperties: false,
+2023-05-01T22:00:24.9588929Z         properties: {
+2023-05-01T22:00:24.9589024Z           backend: {
+2023-05-01T22:00:24.9589209Z             description: 'Specifies
+2023-05-01T22:00:24.9589345Z Node.js v18.16.0
+2023-05-01T22:00:24.9589595Z error Command failed with exit code 1.
+2023-05-01T22:00:24.9589967Z info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+2023-05-01T22:00:24.9611872Z error Command failed with exit code 1.
+2023-05-01T22:00:24.9614076Z info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+2023-05-01T22:00:24.9751441Z ##[error]Process completed with exit code 1.
+2023-05-01T22:00:24.9813074Z Post job cleanup.
+2023-05-01T22:00:25.0847653Z [command]/usr/bin/git version
+2023-05-01T22:00:25.0896192Z git version 2.40.1
+2023-05-01T22:00:25.0947309Z Temporarily overriding HOME='/home/runner/work/_temp/feade4ca-5f31-4b17-9857-0ab59164c257' before making global git config changes
+2023-05-01T22:00:25.0950575Z Adding repository directory to the temporary git global config as a safe directory
+2023-05-01T22:00:25.0958005Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/element-web/element-web
+2023-05-01T22:00:25.1008430Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-05-01T22:00:25.1053291Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-05-01T22:00:25.1299986Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-05-01T22:00:25.1327645Z http.https://github.com/.extraheader
+2023-05-01T22:00:25.1340976Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-05-01T22:00:25.1376799Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-05-01T22:00:25.1851821Z Cleaning up orphan processes
