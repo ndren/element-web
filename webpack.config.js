@@ -134,7 +134,7 @@ module.exports = (env, argv) => {
 
     return {
         ...development,
-        node: {
+        node.resolve.fallback: {
             // Mock out the NodeFS module: The opus decoder imports this wrongly.
             fs: "empty",
             net: "empty",
