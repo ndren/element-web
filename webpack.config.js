@@ -134,12 +134,16 @@ module.exports = (env, argv) => {
 
     return {
         ...development,
-        node: {
-            // Mock out the NodeFS module: The opus decoder imports this wrongly.
-            fs: "empty",
-            net: "empty",
-            tls: "empty",
-            crypto: "empty",
+        
+        // Mock out the NodeFS module: The opus decoder imports this wrongly.
+        resolve: {
+            fallback: {
+                    fs: false,
+                    net: false,
+                    tls: false,
+                    crypto: false,
+		    "util": require.resolve("util/"),
+                }
         },
 
         entry: {
@@ -170,7 +174,7 @@ module.exports = (env, argv) => {
 
             // This fixes duplicate files showing up in chrome with sourcemaps enabled.
             // See https://github.com/webpack/webpack/issues/7128 for more info.
-            namedModules: false,
+            moduleIds: false,
 
             // Minification is normally enabled by default for webpack in production mode, but
             // we use a CSS optimizer too and need to manage it ourselves.
