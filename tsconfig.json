@@ -17,6 +17,10 @@
         "alwaysStrict": true,
         "strictBindCallApply": true,
         "noImplicitThis": true
+	"typeRoots": [
+	    "node_modules/@types"
+	]
+    }
     },
     "include": ["./src/**/*.ts", "./src/**/*.tsx", "./test/**/*.ts", "./test/**/*.tsx"]
 }
