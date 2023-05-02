@@ -142,6 +142,7 @@ module.exports = (env, argv) => {
                     net: "empty",
                     tls: "empty",
                     crypto: "empty",
+		    "util": require.resolve("util/")
                 }
         },
 
