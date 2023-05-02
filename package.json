@@ -79,8 +79,7 @@
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "sanitize-html": "^2.3.2",
-        "ua-parser-js": "^1.0.0",
-        "util": "^0.12.5"
+        "ua-parser-js": "^1.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.12.10",
@@ -177,6 +176,7 @@
         "ts-node": "^10.9.1",
         "ts-prune": "^0.10.3",
         "typescript": "5.0.4",
+        "util": "^0.12.5",
         "webpack": "^5.81.0",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.2",
