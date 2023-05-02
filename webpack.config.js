@@ -138,11 +138,11 @@ module.exports = (env, argv) => {
         // Mock out the NodeFS module: The opus decoder imports this wrongly.
         resolve: {
             fallback: {
-                    fs: "empty",
-                    net: "empty",
-                    tls: "empty",
-                    crypto: "empty",
-		    "util": require.resolve("util/")
+                    fs: false,
+                    net: false,
+                    tls: false,
+                    crypto: false,
+		    "util": require.resolve("util/"),
                 }
         },
 
